@@ -1,5 +1,5 @@
 return {
-  -- TreeSitterJoin plugin (uses SPC cj)
+  -- TreeSitterJoin plugin (uses SPC tm)
   {
     "Wansmer/treesj",
     event = "LazyFile",

@@ -12,6 +12,7 @@ return {
         "black",
         "pyright",
         "bash-language-server",
+        "luacheck",
       },
     },
   },
