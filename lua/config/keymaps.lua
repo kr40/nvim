@@ -22,3 +22,8 @@ vim.keymap.set("n", "<leader>rr", "<cmd>Jaq<CR>", { silent = true, desc = "Run C
 
 -- Toggle Undotree
 vim.keymap.set("n", "<leader>tu", "<cmd>UndotreeToggle<CR>", { silent = true, desc = "Toggle Undotree" })
+
+-- Rename under the cursor
+vim.keymap.set("n", "<leader>rn", function()
+  return ":IncRename " .. vim.fn.expand("<cword>")
+end, { expr = true, desc = "Rename under cursor" })

@@ -17,3 +17,8 @@ vim.opt.colorcolumn = "120"
 
 -- Enable line wrap
 vim.opt.wrap = true
+
+-- Set encoding to utf-8
+vim.scriptencoding = "utf-8"
+vim.opt.encoding = "utf-8"
+vim.opt.fileencoding = "utf-8"
