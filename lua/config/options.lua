@@ -3,22 +3,31 @@
 -- Add any additional options here
 -- luacheck: ignore
 
+-- Shorten vim.opt to opt
+local opt = vim.opt
+
 -- Disabe swapfile
-vim.opt.swapfile = false
+opt.swapfile = false
 
 -- Disable backup
-vim.opt.backup = false
+opt.backup = false
 
 -- Disabe writebackup
-vim.opt.writebackup = false
+opt.writebackup = false
 
 -- Color 120th column
-vim.opt.colorcolumn = "120"
+opt.colorcolumn = "120"
 
 -- Enable line wrap
-vim.opt.wrap = true
+opt.wrap = true
 
 -- Set encoding to utf-8
 vim.scriptencoding = "utf-8"
-vim.opt.encoding = "utf-8"
-vim.opt.fileencoding = "utf-8"
+opt.encoding = "utf-8"
+opt.fileencoding = "utf-8"
+
+-- Number of spaces that a <Tab> counts for while performing editing operations
+opt.softtabstop = 2
+
+-- Enable incremental search
+opt.incsearch = true
