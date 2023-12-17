@@ -22,6 +22,9 @@ keymap.set("n", "J", "mzJ`z")
 -- Paste without losing the current register
 keymap.set("x", "p", [["_dP]])
 
+-- Select all
+keymap.set("n", "<C-a>", "gg<S-v>G")
+
 -- Make current file executable
 keymap.set("n", "<leader>mx", "<cmd>!chmod a+x %<CR>", opts({ desc = "Make Executable (a+x)" }))
 
