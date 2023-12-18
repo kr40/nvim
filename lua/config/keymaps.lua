@@ -29,7 +29,7 @@ keymap.set("n", "<C-a>", "gg<S-v>G")
 keymap.set("n", "<leader>mx", "<cmd>!chmod a+x %<CR>", opts({ desc = "Make Executable (a+x)" }))
 
 -- Toggle Dashboard
-keymap.set("n", "<leader>d", "<cmd>Dashboard<CR>", opts({ desc = "Open Dashboard" }))
+keymap.set("n", "<leader>;", "<cmd>Dashboard<CR>", opts({ desc = "Open Dashboard" }))
 
 -- Toggle Treesj
 keymap.set("n", "<leader>tm", "<cmd>TSJToggle<CR>", opts({ desc = "Toggle Split/Join Code Block" }))

@@ -1,4 +1,5 @@
 return {
+  -- luacheck: ignore
   -- Enable super-tab for cmp
   {
     "hrsh7th/nvim-cmp",
