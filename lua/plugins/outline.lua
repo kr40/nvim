@@ -1,5 +1,5 @@
 return {
-  -- Symbols Outline plugin for Neovim
+  -- Symbols Outline plugin for Neovim (Uses SPC to)
   {
     "hedyhli/outline.nvim",
     event = "LazyFile",
