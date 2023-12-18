@@ -42,3 +42,6 @@ keymap.set("n", "<leader>tu", "<cmd>UndotreeToggle<CR>", opts({ desc = "Toggle U
 
 -- Rename under the cursor
 keymap.set("n", "<leader>rn", rename, opts({ expr = true, desc = "Rename Under Cursor" }))
+
+-- Toggle Barbecue
+keymap.set("n", "<leader>tb", "<cmd>Barbecue toggle<CR>", opts({ desc = "Toggle Barbecue" }))

@@ -1,6 +1,6 @@
 return {
   --[[
-	  Surround plugin - 
+	  Surround plugin -
     add/delete/change can be done with the keymaps ys{motion}{char}, ds{char}, and cs{target}{replacement},
 	  yss {surround current line}, yS and ySS are same ys and yss with new line,
     cS is same as cs with new line,
