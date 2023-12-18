@@ -4,8 +4,9 @@
   - check lua/plugins
 - Disabled some plugins
   - check lua/plugins/disabled.lua
-- Added some options and keymaps
+- Added some options, keymaps and autocmds
   - check lua/config/options.lua
   - check lua/config/keymaps.lua
+  - check lua/config/autocmds.lua
 
-- Very Documented and easy to understand and configure on your own
+- Documented, Easy to understand and Configure on your own
