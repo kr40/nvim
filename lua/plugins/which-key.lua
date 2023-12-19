@@ -22,7 +22,7 @@ return {
         ["<leader>u"] = { name = "+ui" },
         ["<leader>w"] = { name = "+windows" },
         ["<leader>x"] = { name = "+diagnostics/quickfix" },
-        ["<leader>t"] = { name = "+toggle" },
+        ["<leader>z"] = { name = "+user" },
       },
     },
   },

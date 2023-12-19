@@ -1,5 +1,5 @@
 return {
-  -- Code runner plugin for neovim (Uses SPC cc )
+  -- Code runner plugin for neovim (Uses SPC zc )
   {
     "is0n/jaq-nvim",
     event = "LazyFile",

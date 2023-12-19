@@ -1,5 +1,5 @@
 return {
-  -- VSCode style winbar
+  -- VSCode style winbar (Uses SPC zb)
   {
     "utilyre/barbecue.nvim",
     event = "LazyFile",

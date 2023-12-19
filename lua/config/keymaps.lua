@@ -24,22 +24,25 @@ keymap.set("x", "p", [["_dP]])
 keymap.set("n", "<C-a>", "gg<S-v>G")
 
 -- Make current file executable
-keymap.set("n", "<leader>cx", "<cmd>!chmod a+x %<CR>", opts({ desc = "Make Executable" }))
+keymap.set("n", "<leader>zx", "<cmd>!chmod a+x %<CR>", opts({ desc = "Make Current File Executable" }))
 
 -- Toggle Dashboard
 keymap.set("n", "<leader>;", "<cmd>Dashboard<CR>", opts({ desc = "Open Dashboard" }))
 
 -- Toggle Treesj
-keymap.set("n", "<leader>tm", "<cmd>TSJToggle<CR>", opts({ desc = "Toggle Split/Join Code Block" }))
+keymap.set("n", "<leader>zm", "<cmd>TSJToggle<CR>", opts({ desc = "Toggle Split/Join Code Block" }))
 
 -- Run Code
-keymap.set("n", "<leader>cc", "<cmd>Jaq<CR>", opts({ desc = "Run Code" }))
+keymap.set("n", "<leader>zc", "<cmd>Jaq<CR>", opts({ desc = "Run Code" }))
 
 -- Toggle Undotree
-keymap.set("n", "<leader>tu", "<cmd>UndotreeToggle<CR>", opts({ desc = "Toggle Undotree" }))
+keymap.set("n", "<leader>zu", "<cmd>UndotreeToggle<CR>", opts({ desc = "Toggle Undotree" }))
 
 -- Toggle Barbecue
-keymap.set("n", "<leader>tb", "<cmd>Barbecue toggle<CR>", opts({ desc = "Toggle Barbecue" }))
+keymap.set("n", "<leader>zb", "<cmd>Barbecue toggle<CR>", opts({ desc = "Toggle Barbecue" }))
 
 -- Rename under the cursor
-keymap.set("n", "<leader>cR", rename, opts({ desc = "Rename All" }))
+keymap.set("n", "<leader>zr", rename, opts({ desc = "Rename All" }))
+
+-- Run command and paste output
+keymap.set("n", "<leader>zp", [[:r!]], opts({ desc = "Run Command and Paste Output" }))

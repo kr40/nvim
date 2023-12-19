@@ -1,5 +1,5 @@
 return {
-  -- Git like undo history plugin (Uses SPC tu)
+  -- Git like undo history plugin (Uses SPC zu)
   {
     "mbbill/undotree",
     event = "LazyFile",
