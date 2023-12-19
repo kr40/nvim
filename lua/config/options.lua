@@ -31,3 +31,6 @@ opt.softtabstop = 2
 
 -- Enable incremental search
 opt.incsearch = true
+
+-- Enable Spellcheck
+opt.spell = true

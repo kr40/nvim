@@ -23,8 +23,6 @@ return {
         ["<leader>w"] = { name = "+windows" },
         ["<leader>x"] = { name = "+diagnostics/quickfix" },
         ["<leader>t"] = { name = "+toggle" },
-        ["<leader>r"] = { name = "+run/rename" },
-        ["<leader>m"] = { name = "+make" },
       },
     },
   },
