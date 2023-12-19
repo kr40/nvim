@@ -8,8 +8,10 @@ local function opts(additional_options)
   return vim.tbl_extend("force", { noremap = true, silent = true }, additional_options)
 end
 
+local rename = [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]]
+
 -- Function for IncRename
-local function rename()
+local function increname()
   return ":IncRename " .. vim.fn.expand("<cword>")
 end
 
@@ -40,8 +42,11 @@ keymap.set("n", "<leader>rr", "<cmd>Jaq<CR>", opts({ desc = "Run Code" }))
 -- Toggle Undotree
 keymap.set("n", "<leader>tu", "<cmd>UndotreeToggle<CR>", opts({ desc = "Toggle Undotree" }))
 
--- Rename under the cursor
-keymap.set("n", "<leader>rn", rename, opts({ expr = true, desc = "Rename Under Cursor" }))
+-- Rename under the cursor (LSP Identifier)
+keymap.set("n", "<leader>rl", increname, opts({ expr = true, desc = "Rename LSP Identifier" }))
 
 -- Toggle Barbecue
 keymap.set("n", "<leader>tb", "<cmd>Barbecue toggle<CR>", opts({ desc = "Toggle Barbecue" }))
+
+-- Rename under the cursor
+keymap.set("n", "<leader>rn", rename, opts({ desc = "Rename Under Cursor" }))
