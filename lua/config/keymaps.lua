@@ -58,15 +58,3 @@ keymap.set("n", "<A-l>", ":MoveWord 1<CR>", opts({ desc = "Move Word Right" }))
 -- Move Selection left and right
 keymap.set("v", "<A-h>", ":MoveHBlock -1<CR>", opts({ desc = "Move Block Left" }))
 keymap.set("v", "<A-l>", ":MoveHBlock 1<CR>", opts({ desc = "Move Block Right" }))
-
--- Substitute mappings
--- Substitute text with what is currently yanked
-keymap.set("n", "s", require("substitute").operator, { noremap = true })
-keymap.set("n", "ss", require("substitute").line, { noremap = true })
-keymap.set("x", "s", require("substitute").visual, { noremap = true })
-keymap.set("n", "S", require("substitute").eol, { noremap = true })
-
--- Exchange text
-keymap.set("n", "sx", require("substitute.exchange").operator, { noremap = true })
-keymap.set("n", "sxx", require("substitute.exchange").line, { noremap = true })
-keymap.set("x", "X", require("substitute.exchange").visual, { noremap = true })
