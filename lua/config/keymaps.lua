@@ -46,3 +46,6 @@ keymap.set("n", "<leader>zr", rename, opts({ desc = "Rename All" }))
 
 -- Run command and paste output
 keymap.set("n", "<leader>zp", [[:r!]], opts({ desc = "Run Command and Paste Output" }))
+
+-- Delete current buffer into the void register
+keymap.set({ "n", "x" }, "<leader>zd", [["_d]], opts({ desc = "Delete into void register" }))
