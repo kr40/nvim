@@ -21,7 +21,7 @@ keymap.set("n", "J", "mzJ`z")
 keymap.set("x", "p", [["_dP]])
 
 -- Select all
-keymap.set("n", "<C-a>", "gg<S-v>G")
+keymap.set("n", "<C-a>", "gg<S-v>G", { desc = "Select All" })
 
 -- Make current file executable
 keymap.set("n", "<leader>zx", "<cmd>!chmod a+x %<CR>", opts({ desc = "Make Current File Executable" }))
@@ -49,3 +49,24 @@ keymap.set("n", "<leader>zp", [[:r!]], opts({ desc = "Run Command and Paste Outp
 
 -- Delete current buffer into the void register
 keymap.set({ "n", "x" }, "<leader>zd", [["_d]], opts({ desc = "Delete into void register" }))
+
+-- Move mappings
+-- Move word left and right
+keymap.set("n", "<A-h>", ":MoveWord -1<CR>", opts({ desc = "Move Word Left" }))
+keymap.set("n", "<A-l>", ":MoveWord 1<CR>", opts({ desc = "Move Word Right" }))
+
+-- Move Selection left and right
+keymap.set("v", "<A-h>", ":MoveHBlock -1<CR>", opts({ desc = "Move Block Left" }))
+keymap.set("v", "<A-l>", ":MoveHBlock 1<CR>", opts({ desc = "Move Block Right" }))
+
+-- Substitute mappings
+-- Substitute text with what is currently yanked
+keymap.set("n", "s", require("substitute").operator, { noremap = true })
+keymap.set("n", "ss", require("substitute").line, { noremap = true })
+keymap.set("x", "s", require("substitute").visual, { noremap = true })
+keymap.set("n", "S", require("substitute").eol, { noremap = true })
+
+-- Exchange text
+keymap.set("n", "sx", require("substitute.exchange").operator, { noremap = true })
+keymap.set("n", "sxx", require("substitute.exchange").line, { noremap = true })
+keymap.set("x", "X", require("substitute.exchange").visual, { noremap = true })

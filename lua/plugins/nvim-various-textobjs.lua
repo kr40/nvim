@@ -4,6 +4,6 @@ return {
   {
     "chrisgrieser/nvim-various-textobjs",
     event = "LazyFile",
-    opts = { useDefaultKeymaps = true, disabledKeymaps = {} },
+    opts = { useDefaultKeymaps = true, disabledKeymaps = { "gc" } },
   },
 }
