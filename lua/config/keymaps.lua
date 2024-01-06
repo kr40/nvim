@@ -20,8 +20,8 @@ keymap.set("n", "J", "mzJ`z")
 -- Paste without losing the current register in Visual modes
 keymap.set("x", "p", [["_dP]])
 
--- Select all
-keymap.set("n", "<C-a>", "gg<S-v>G", { desc = "Select All" })
+-- -- Select all
+-- keymap.set("n", "<C-a>", "gg<S-v>G", { desc = "Select All" })
 
 -- Rename under the cursor
 keymap.set("n", "<leader>zr", rename, opts({ desc = "Rename Under the Cursor" }))
