@@ -2,7 +2,6 @@ return {
   -- Automatically close and rename HTML tags
   {
     "windwp/nvim-ts-autotag",
-    event = "LazyFile",
     config = function()
       require("nvim-ts-autotag").setup({
         autotag = {

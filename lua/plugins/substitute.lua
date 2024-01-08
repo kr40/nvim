@@ -2,7 +2,6 @@ return {
   -- Provides new operator motions to make it very easy to perform quick substitutions and exchange
   {
     "gbprod/substitute.nvim",
-    event = "LazyFile",
     keys = {
       {
         "s",

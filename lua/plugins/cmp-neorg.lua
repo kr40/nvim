@@ -2,7 +2,6 @@ return {
   -- Add Neorg support to nvim-cmp
   {
     "hrsh7th/nvim-cmp",
-    dependencies = { "nvim-neorg/neorg" },
     ---@param opts cmp.ConfigSchema
     opts = function(_, opts)
       local cmp = require("cmp")

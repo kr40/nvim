@@ -2,7 +2,6 @@ return {
   -- Enhances w, b, e, ge motions
   {
     "chrisgrieser/nvim-spider",
-    event = "LazyFile",
     keys = {
       {
         "w",

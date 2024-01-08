@@ -2,7 +2,7 @@ return {
   -- TreeSitterJoin plugin (uses SPC zm)
   {
     "Wansmer/treesj",
-    event = "LazyFile",
+    cmd = { "TSJToggle" },
     dependencies = { "nvim-treesitter/nvim-treesitter" },
     config = function()
       require("treesj").setup({

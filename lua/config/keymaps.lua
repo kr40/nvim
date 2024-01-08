@@ -11,7 +11,7 @@ end
 -- Shorten vim.keymap to keymap
 local keymap = vim.keymap
 
--- Function to rename all occurrences of the word under the cursor
+-- Regex to rename all occurrences of the word under the cursor
 local rename = [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]]
 
 -- Use J without moving the cursor
@@ -32,9 +32,6 @@ keymap.set({ "n", "x" }, "<leader>zd", [["_d]], opts({ desc = "Delete Into The V
 -- Make current file executable
 keymap.set("n", "<leader>zx", "<cmd>!chmod a+x %<CR>", opts({ desc = "Make Current File Executable" }))
 
--- Go to Neorg "notes" workspace
-keymap.set("n", "<leader>zn", "<cmd>Neorg workspace notes<CR>", opts({ desc = "Go to Neorg Notes Workspace" }))
-
 ----------------------------------------------- Plugin Mappings -------------------------------------------------------
 
 -- Open Dashboard
@@ -52,11 +49,11 @@ keymap.set("n", "<leader>zu", "<cmd>UndotreeToggle<CR>", opts({ desc = "Toggle U
 -- Toggle Barbecue
 keymap.set("n", "<leader>zb", "<cmd>Barbecue toggle<CR>", opts({ desc = "Toggle Barbecue" }))
 
--- Move mappings
--- Move word left and right
-keymap.set("n", "<A-h>", ":MoveWord -1<CR>", opts({ desc = "Move Word Left" }))
-keymap.set("n", "<A-l>", ":MoveWord 1<CR>", opts({ desc = "Move Word Right" }))
+-- Go to Neorg "notes" workspace
+keymap.set("n", "<leader>zn", "<cmd>Neorg workspace notes<CR>", opts({ desc = "Go to Neorg Notes Workspace" }))
 
--- Move block left and right
-keymap.set("v", "<A-h>", ":MoveHBlock -1<CR>", opts({ desc = "Move Block Left" }))
-keymap.set("v", "<A-l>", ":MoveHBlock 1<CR>", opts({ desc = "Move Block Right" }))
+-- Toggle Symbols Outline
+keymap.set("n", "<leader>zo", "<cmd>Outline<CR>", opts({ desc = "Toggle Symbols Outline" }))
+
+-- Open Oil
+keymap.set("n", "-", "<CMD>Oil --float<CR>", opts({ desc = "Open Parent Directory" }))

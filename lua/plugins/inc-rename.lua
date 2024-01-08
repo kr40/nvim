@@ -2,7 +2,7 @@ return {
   -- Rename with preview
   {
     "smjonas/inc-rename.nvim",
-    event = "LazyFile",
+    cmd = "IncRename",
     config = function()
       require("inc_rename").setup()
     end,

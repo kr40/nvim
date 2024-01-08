@@ -5,6 +5,7 @@ return {
   -- tag = "*",
   dependencies = { "nvim-lua/plenary.nvim" },
   ft = "norg",
+  cmd = "Neorg",
   config = function()
     require("neorg").setup({
       load = {

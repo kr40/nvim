@@ -2,7 +2,17 @@ return {
   -- Colorize color properties
   {
     "NvChad/nvim-colorizer.lua",
-    event = "LazyFile",
+    ft = {
+      "css",
+      "javascript",
+      "javascriptreact",
+      "typescript",
+      "typescriptreact",
+      "svelte",
+      "html",
+      "vue",
+      "lua",
+    },
     config = function()
       require("colorizer").setup({
         filetypes = {

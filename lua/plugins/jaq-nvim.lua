@@ -2,7 +2,7 @@ return {
   -- Code runner plugin for neovim (Uses SPC zc )
   {
     "is0n/jaq-nvim",
-    event = "LazyFile",
+    cmd = "Jaq",
     config = function()
       require("jaq-nvim").setup({
         cmds = {

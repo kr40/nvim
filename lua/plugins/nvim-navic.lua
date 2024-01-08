@@ -2,7 +2,7 @@ return {
   -- LSP code context provider
   {
     "SmiteshP/nvim-navic",
-    event = "LazyFile",
+    lazy = true,
     init = function()
       vim.g.navic_silence = true
       require("lazyvim.util").lsp.on_attach(function(client, buffer)
