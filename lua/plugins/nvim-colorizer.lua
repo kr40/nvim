@@ -3,14 +3,13 @@ return {
   {
     "NvChad/nvim-colorizer.lua",
     ft = {
-      "css",
-      "javascript",
-      "javascriptreact",
       "typescript",
       "typescriptreact",
-      "svelte",
+      "javascript",
+      "javascriptreact",
+      "css",
       "html",
-      "vue",
+      "svelte",
       "lua",
     },
     config = function()
@@ -22,7 +21,7 @@ return {
           "javascriptreact",
           "css",
           "html",
-          "svele",
+          "svelte",
           "lua",
         },
         user_default_options = {
