@@ -6,7 +6,7 @@
 -- Shorten vim.opt to opt
 local opt = vim.opt
 
--- Disabe swapfile
+-- Disable swapfile
 opt.swapfile = false
 
 -- Disable backup

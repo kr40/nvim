@@ -32,6 +32,9 @@ keymap.set({ "n", "x" }, "<leader>zd", [["_d]], opts({ desc = "Delete Into The V
 -- Make current file executable
 keymap.set("n", "<leader>zx", "<cmd>!chmod a+x %<CR>", opts({ desc = "Make Current File Executable" }))
 
+-- Go to Neorg "notes" workspace
+keymap.set("n", "<leader>zn", "<cmd>Neorg workspace notes<CR>", opts({ desc = "Go to Neorg Notes Workspace" }))
+
 ----------------------------------------------- Plugin Mappings -------------------------------------------------------
 
 -- Open Dashboard
