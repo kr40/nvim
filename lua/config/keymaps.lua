@@ -56,4 +56,4 @@ keymap.set("n", "<leader>zn", "<cmd>Neorg workspace notes<CR>", opts({ desc = "G
 keymap.set("n", "<leader>zo", "<cmd>Outline<CR>", opts({ desc = "Toggle Symbols Outline" }))
 
 -- Open Oil
-keymap.set("n", "-", "<CMD>Oil --float<CR>", opts({ desc = "Open Parent Directory" }))
+keymap.set("n", "-", "<cmd>Oil --float<CR>", opts({ desc = "Open Parent Directory" }))
