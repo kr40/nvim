@@ -2,7 +2,7 @@ return {
   -- Changes color of the cursor's line number based on the current vim mode
   {
     "mawkler/modicator.nvim",
-    dependencies = "folke/tokyonight.nvim",
+    dependencies = "catppuccin/nvim",
     event = "LazyFile",
     --[[ init = function()
       vim.o.cursorline = true
