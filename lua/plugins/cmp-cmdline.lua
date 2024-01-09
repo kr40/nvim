@@ -1,4 +1,3 @@
----@diagnostic disable: unused-local
 return {
   -- Add cmdline support to nvim-cmp
   {

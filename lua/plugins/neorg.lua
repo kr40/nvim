@@ -1,5 +1,5 @@
 return {
-  -- Org mode for Neovim
+  -- Org mode for Neovim, (Uses SPC zn)
   "nvim-neorg/neorg",
   build = ":Neorg sync-parsers",
   -- tag = "*",

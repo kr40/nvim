@@ -1,0 +1,21 @@
+{
+  "func": {
+    "body": [
+      "local function ${1}()",
+      "\treturn ${2}",
+      "end"
+    ],
+    "filetype": "lua",
+    "prefix": "func"
+  },
+  "keyconfig": {
+    "body": [
+      "\"${1:Key}\",",
+      "${2:Action},",
+      "mode = { ${3:Mode} },",
+      "desc = \"${4:Description}\","
+    ],
+    "filetype": "lua",
+    "prefix": "keyconfig"
+  }
+}
