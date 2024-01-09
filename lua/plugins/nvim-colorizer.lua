@@ -26,7 +26,8 @@ return {
         },
         user_default_options = {
           css = true,
-          tailwind = "both",
+          css_fn = true,
+          tailwind = true,
         },
         buftypes = {},
       })
