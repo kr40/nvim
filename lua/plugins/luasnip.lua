@@ -1,8 +1,8 @@
 return {
-  -- Snippet engine for Neovim
+  -- Luasnip settings for emoji
   {
     "L3MON4D3/LuaSnip",
-    keys = function() -- Removing keys and setting up Supertab
+    keys = function()
       return {}
     end,
   },

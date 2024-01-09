@@ -32,9 +32,6 @@ keymap.set({ "n", "x" }, "<leader>zd", [["_d]], opts({ desc = "Delete Into The V
 -- Make current file executable
 keymap.set("n", "<leader>zx", "<cmd>!chmod a+x %<CR>", opts({ desc = "Make Current File Executable" }))
 
--- Correct to last typo in insert mode
-keymap.set("i", "<C-l>", "<c-g>u<Esc>[s1z=`]a<c-g>u", opts({ desc = "Correct last typo" }))
-
 ----------------------------------------------- Plugin Mappings -------------------------------------------------------
 
 -- Open Dashboard
