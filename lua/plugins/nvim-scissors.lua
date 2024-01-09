@@ -1,9 +1,9 @@
 return {
   -- Snippet management plugin for Neovim (Uses SPC zs and SPC ze)
-  "chrisgrieser/nvim-scissors",
-  -- dependencies = "nvim-telescope/telescope.nvim",
-  config = function()
-    require("scissors").setup({
+  {
+    "chrisgrieser/nvim-scissors",
+    -- dependencies = "nvim-telescope/telescope.nvim",
+    opts = {
       snippetDir = "/home/kr40/.config/nvim/snippets/",
       editSnippetPopup = {
         height = 0.4, -- relative to the window, number between 0 and 1
@@ -22,24 +22,24 @@ return {
       -- `yq`/`jq` ensure formatted & sorted json files, which is relevant when
       -- you version control your snippets.
       jsonFormatter = "jq", -- "yq"|"jq"|"none"
-    })
-  end,
-  keys = {
-    {
-      "<leader>zs",
-      function()
-        require("scissors").addNewSnippet()
-      end,
-      mode = { "n", "x" },
-      desc = "Add New Snippet",
     },
-    {
-      "<leader>ze",
-      function()
-        require("scissors").editSnippet()
-      end,
-      mode = "n",
-      desc = "Edit Snippet",
+    keys = {
+      {
+        "<leader>zs",
+        function()
+          require("scissors").addNewSnippet()
+        end,
+        mode = { "n", "x" },
+        desc = "Add New Snippet",
+      },
+      {
+        "<leader>ze",
+        function()
+          require("scissors").editSnippet()
+        end,
+        mode = "n",
+        desc = "Edit Snippet",
+      },
     },
   },
 }

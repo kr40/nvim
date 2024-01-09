@@ -11,8 +11,6 @@ return {
     "kylechui/nvim-surround",
     version = "*",
     event = "LazyFile",
-    config = function()
-      require("nvim-surround").setup()
-    end,
+    opts = {},
   },
 }

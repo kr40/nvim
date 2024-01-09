@@ -1,13 +1,13 @@
 return {
   -- Org mode for Neovim, (Uses SPC zn)
-  "nvim-neorg/neorg",
-  build = ":Neorg sync-parsers",
-  -- tag = "*",
-  dependencies = { "nvim-lua/plenary.nvim" },
-  ft = "norg",
-  cmd = "Neorg",
-  config = function()
-    require("neorg").setup({
+  {
+    "nvim-neorg/neorg",
+    build = ":Neorg sync-parsers",
+    -- tag = "*",
+    dependencies = { "nvim-lua/plenary.nvim" },
+    ft = "norg",
+    cmd = "Neorg",
+    opts = {
       load = {
         ["core.defaults"] = {}, -- Loads default behaviour
         ["core.concealer"] = {}, -- Adds pretty icons to your documents
@@ -24,6 +24,6 @@ return {
           },
         },
       },
-    })
-  end,
+    },
+  },
 }

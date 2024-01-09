@@ -3,79 +3,77 @@ return {
   {
     "is0n/jaq-nvim",
     cmd = "Jaq",
-    config = function()
-      require("jaq-nvim").setup({
-        cmds = {
-          -- Uses vim commands
-          internal = {
-            vim = "source %",
-          },
-
-          -- Uses shell commands
-          external = {
-            markdown = "glow %",
-            python = "python3 %",
-            go = "go run %",
-            sh = "sh %",
-            lua = "lua %",
-            javascript = "node %",
-            typescript = "ts-node %",
-          },
+    opts = {
+      cmds = {
+        -- Uses vim commands
+        internal = {
+          vim = "source %",
         },
 
-        behavior = {
-          -- Default type
-          default = "float",
+        -- Uses shell commands
+        external = {
+          markdown = "glow %",
+          python = "python3 %",
+          go = "go run %",
+          sh = "sh %",
+          lua = "lua %",
+          javascript = "node %",
+          typescript = "ts-node %",
+        },
+      },
 
-          -- Start in insert mode
-          startinsert = false,
+      behavior = {
+        -- Default type
+        default = "float",
 
-          -- Use `wincmd p` on startup
-          wincmd = false,
+        -- Start in insert mode
+        startinsert = false,
 
-          -- Auto-save files
-          autosave = false,
+        -- Use `wincmd p` on startup
+        wincmd = false,
+
+        -- Auto-save files
+        autosave = false,
+      },
+
+      ui = {
+        float = {
+          -- See ':h nvim_open_win'
+          border = "single",
+
+          -- See ':h winhl'
+          winhl = "Normal",
+          borderhl = "FloatBorder",
+
+          -- See ':h winblend'
+          winblend = 0,
+
+          -- Num from `0-1` for measurements
+          height = 0.8,
+          width = 0.8,
+          x = 0.5,
+          y = 0.5,
         },
 
-        ui = {
-          float = {
-            -- See ':h nvim_open_win'
-            border = "single",
+        terminal = {
+          -- Window position
+          position = "bot",
 
-            -- See ':h winhl'
-            winhl = "Normal",
-            borderhl = "FloatBorder",
+          -- Window size
+          size = 10,
 
-            -- See ':h winblend'
-            winblend = 0,
-
-            -- Num from `0-1` for measurements
-            height = 0.8,
-            width = 0.8,
-            x = 0.5,
-            y = 0.5,
-          },
-
-          terminal = {
-            -- Window position
-            position = "bot",
-
-            -- Window size
-            size = 10,
-
-            -- Disable line numbers
-            line_no = false,
-          },
-
-          quickfix = {
-            -- Window position
-            position = "bot",
-
-            -- Window size
-            size = 10,
-          },
+          -- Disable line numbers
+          line_no = false,
         },
-      })
-    end,
+
+        quickfix = {
+          -- Window position
+          position = "bot",
+
+          -- Window size
+          size = 10,
+        },
+      },
+    },
   },
 }

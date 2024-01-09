@@ -4,13 +4,11 @@ return {
     "stevearc/oil.nvim",
     dependencies = { "nvim-tree/nvim-web-devicons" },
     cmd = "Oil",
-    config = function()
-      require("oil").setup({
-        use_default_keymaps = false,
-        view_options = {
-          show_hidden = true,
-        },
-      })
-    end,
+    opts = {
+      use_default_keymaps = false,
+      view_options = {
+        show_hidden = true,
+      },
+    },
   },
 }
