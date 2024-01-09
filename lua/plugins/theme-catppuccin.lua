@@ -71,10 +71,16 @@ return {
         semantic_tokens = true,
         telescope = true,
         treesitter = true,
-        treesitter_context = true,
+        treesitter_context = false,
         which_key = true,
         rainbow_delimiters = true,
         symbols_outline = true,
+        barbecue = {
+          dim_dirname = true, -- directory name is dimmed by default
+          bold_basename = true,
+          dim_context = false,
+          alt_background = false,
+        },
       },
     },
   },
