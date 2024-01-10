@@ -9,18 +9,14 @@ return {
           local active_clients = vim.lsp.get_active_clients({ bufnr = 0 })
           local buf_client_names = {}
 
-          if not active_clients or #active_clients == 0 then
-            return ""
-          end
-
-          -- Collect active LSP clients
+          -- Include LSP clients from nvim-lspconfig
           for _, client in pairs(active_clients) do
             if client.name ~= "copilot" then
               table.insert(buf_client_names, client.name)
             end
           end
 
-          -- Include linters
+          -- Include linters from nvim-lint
           local lint_s, lint = pcall(require, "lint")
           if lint_s then
             local buf_ft = vim.bo.filetype
@@ -39,7 +35,15 @@ return {
             end
           end
 
-          -- Include formatters
+          -- Include ESLint for specific filetypes if installed
+          if vim.fn.executable("eslint") == 1 then
+            local eslint_filetypes = { "javascript", "typescript", "javascriptreact", "typescriptreact" }
+            if vim.fn.index(eslint_filetypes, vim.bo.filetype) ~= -1 then
+              table.insert(buf_client_names, "eslint")
+            end
+          end
+
+          -- Include formatters from conform.nvim
           local ok, conform = pcall(require, "conform")
           local formatters = table.concat(conform.formatters_by_ft[vim.bo.filetype], " ")
           if ok then
@@ -68,10 +72,10 @@ return {
           return table.concat(unique_client_names, ", ")
         end
 
-        return clients_lsp() -- Call the function to get the result
+        return clients_lsp()
       end)
 
-      -- Add shiftwidth
+      -- Add shiftwidth information
       table.insert(opts.sections.lualine_x, 4, function()
         return "⇥ " .. vim.bo.shiftwidth
       end)
