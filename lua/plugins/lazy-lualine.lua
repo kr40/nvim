@@ -5,11 +5,12 @@ return {
     "nvim-lualine/lualine.nvim",
     opts = function(_, opts)
       table.insert(opts.sections.lualine_x, 3, function()
-        local clients_lsp = function()
+        local clients = function()
+          -- Include LSP clients from nvim-lspconfig
           local active_clients = vim.lsp.get_active_clients({ bufnr = 0 })
           local buf_client_names = {}
 
-          -- Include LSP clients from nvim-lspconfig
+          -- Exclude copilot from the list of clients
           for _, client in pairs(active_clients) do
             if client.name ~= "copilot" then
               table.insert(buf_client_names, client.name)
@@ -72,7 +73,7 @@ return {
           return table.concat(unique_client_names, ", ")
         end
 
-        return clients_lsp()
+        return clients()
       end)
 
       -- Add shiftwidth information
