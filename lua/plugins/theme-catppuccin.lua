@@ -71,7 +71,7 @@ return {
         semantic_tokens = true,
         telescope = true,
         treesitter = true,
-        treesitter_context = false,
+        treesitter_context = true,
         which_key = true,
         rainbow_delimiters = true,
         symbols_outline = true,

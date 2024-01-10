@@ -5,7 +5,7 @@ return {
     opts = {
       views = {
         mini = {
-          size = { height = "auto", width = "auto", max_height = 5 }, -- Set max size to 5 lines
+          size = { height = "auto", width = "auto", max_height = 5 }, -- Set max height to 5 lines
         },
       },
     },
