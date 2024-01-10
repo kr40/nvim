@@ -35,6 +35,7 @@ return {
           ".git/.*",
           "auto%-cpufreq/.*",
           "%.deb",
+          "luarocks%-*",
         },
 
         -- open files in the first window that is an actual file.
