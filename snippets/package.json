@@ -1,19 +1,23 @@
 {
-  "name": "user-snippets",
   "contributes": {
     "snippets": [
       {
-        "language": [
-          "all"
-        ],
-        "path": "./all/all.json"
+        "language": "python",
+        "path": "./python.json"
       },
       {
-        "language": [
-          "lua"
-        ],
+        "language": "lua",
         "path": "./lua.json"
+      },
+      {
+        "language": "javascript",
+        "path": "./javascript.json"
+      },
+      {
+        "language": "all",
+        "path": "./allFiletypes.json"
       }
     ]
-  }
+  },
+  "name": "user-snippets"
 }
