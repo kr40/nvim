@@ -14,6 +14,8 @@ return {
         "pyright",
         "bash-language-server",
         "luacheck",
+        "html-lsp",
+        "css-lsp",
       })
     end,
   },

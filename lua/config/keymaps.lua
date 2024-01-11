@@ -14,6 +14,9 @@ local keymap = vim.keymap
 -- Regex to rename all occurrences of the word under the cursor
 local rename = [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]]
 
+-- Require genghis
+local genghis = require("genghis")
+
 -- Use J without moving the cursor
 keymap.set("n", "J", "mzJ`z")
 
@@ -28,9 +31,6 @@ keymap.set("n", "<leader>zp", [[:r!]], opts({ desc = "Run Command and Paste Outp
 
 -- Delete into the void register
 keymap.set({ "n", "x" }, "<leader>zd", [["_d]], opts({ desc = "Delete Into The Void Register" }))
-
--- Make current file executable
-keymap.set("n", "<leader>zx", "<cmd>!chmod a+x %<CR>", opts({ desc = "Make Current File Executable" }))
 
 -- Correct to last typo in insert mode
 keymap.set("i", "<C-l>", "<c-g>u<Esc>[s1z=`]a<c-g>u", opts({ desc = "Correct last typo" }))
@@ -60,3 +60,6 @@ keymap.set("n", "<leader>zo", "<cmd>Outline<CR>", opts({ desc = "Toggle Symbols 
 
 -- Open Oil
 keymap.set("n", "-", "<cmd>Oil --float<CR>", opts({ desc = "Open Parent Directory" }))
+
+-- Make current file executable
+keymap.set("n", "<leader>zx", genghis.chmodx, opts({ desc = "Make Current File Executable" }))
