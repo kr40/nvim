@@ -13,6 +13,9 @@ return {
         default = {
           augend.integer.alias.decimal,
           augend.integer.alias.hex,
+          augend.hexcolor.new({
+            case = "lower",
+          }),
           augend.date.alias["%d/%m/%Y"],
           augend.date.alias["%d-%m-%Y"],
           augend.date.alias["%d/%m"],
