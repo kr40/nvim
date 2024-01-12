@@ -38,6 +38,11 @@ return {
             "%.deb",
             "luarocks%-*",
             "lazygit",
+            "Library/.*",
+            "Music/.*",
+            "Downloads/.*",
+            "Pictures/.*",
+            "Movies/.*",
           },
 
           -- open files in the first window that is an actual file.
