@@ -25,7 +25,7 @@ return {
         },
       })
 
-      opts.sources = cmp.config.sources(vim.list_extend(opts.sources, { { name = "dictionary", keyword_length = 5 } }))
+      opts.sources = cmp.config.sources(vim.list_extend(opts.sources, { { name = "dictionary", keyword_length = 6 } }))
     end,
   },
 }

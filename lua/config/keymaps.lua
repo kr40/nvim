@@ -3,63 +3,62 @@
 -- Add any additional keymaps here
 -- luacheck: ignore
 
--- Function to shorten keymap options
-local function opts(additional_options)
-  return vim.tbl_extend("force", { noremap = true, silent = true }, additional_options)
-end
+-- Require Genghis for chmodx
+local genghis = require("genghis")
 
--- Shorten vim.keymap to keymap
-local keymap = vim.keymap
+-- Require custom keymap functions
+local opts = require("config.customkey").opts
+local nmap = require("config.customkey").nmap
+local imap = require("config.customkey").imap
+local xmap = require("config.customkey").xmap
+local nxmap = require("config.customkey").nxmap
 
 -- Regex to rename all occurrences of the word under the cursor
 local rename = [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]]
 
--- Require genghis
-local genghis = require("genghis")
-
 -- Use J without moving the cursor
-keymap.set("n", "J", "mzJ`z")
+nmap({ "J", "mzJ`z" })
 
 -- Paste without losing the current register in Visual modes
-keymap.set("x", "p", [["_dP]])
+xmap({ "p", [["_dP]] })
 
 -- Rename under the cursor
-keymap.set("n", "<leader>zr", rename, opts({ desc = "Rename Under the Cursor" }))
+nmap({ "<leader>zr", rename, opts({ desc = "Rename Under the Cursor" }) })
 
 -- Run command and paste output
-keymap.set("n", "<leader>zp", [[:r!]], opts({ desc = "Run Command and Paste Output" }))
+nmap({ "<leader>zp", [[:r!]], opts({ desc = "Run Command and Paste Output" }) })
 
 -- Delete into the void register
-keymap.set({ "n", "x" }, "<leader>zd", [["_d]], opts({ desc = "Delete Into The Void Register" }))
+nxmap({ "<leader>zd", [["_d]], opts({ desc = "Delete Into The Void Register" }) })
 
 -- Correct to last typo in insert mode
-keymap.set("i", "<C-l>", "<c-g>u<Esc>[s1z=`]a<c-g>u", opts({ desc = "Correct last typo" }))
+imap({ "<C-l>", "<c-g>u<Esc>[s1z=`]a<c-g>u", opts({ desc = "Correct last typo" }) })
 
 ----------------------------------------------- Plugin Mappings -------------------------------------------------------
 
 -- Open Dashboard
-keymap.set("n", "<leader>;", "<cmd>Dashboard<CR>", opts({ desc = "Open Dashboard" }))
+nmap({ "<leader>;", "<cmd>Dashboard<CR>", opts({ desc = "Open Dashboard" }) })
 
 -- Toggle Treesj
-keymap.set("n", "<leader>zm", "<cmd>TSJToggle<CR>", opts({ desc = "Toggle Split/Join Code Block" }))
+nmap({ "<leader>zm", "<cmd>TSJToggle<CR>", opts({ desc = "Toggle Split/Join Code Block" }) })
 
 -- Run Code
-keymap.set("n", "<leader>zc", "<cmd>Jaq<CR>", opts({ desc = "Run Code" }))
+nmap({ "<leader>zc", "<cmd>Jaq<CR>", opts({ desc = "Run Code" }) })
 
 -- Toggle Undotree
-keymap.set("n", "<leader>zu", "<cmd>UndotreeToggle<CR>", opts({ desc = "Toggle Undotree" }))
+nmap({ "<leader>zu", "<cmd>UndotreeToggle<CR>", opts({ desc = "Toggle Undotree" }) })
 
 -- Toggle Barbecue
-keymap.set("n", "<leader>zb", "<cmd>Barbecue toggle<CR>", opts({ desc = "Toggle Barbecue" }))
+nmap({ "<leader>zb", "<cmd>Barbecue toggle<CR>", opts({ desc = "Toggle Barbecue" }) })
 
 -- Go to Neorg "notes" workspace
-keymap.set("n", "<leader>zn", "<cmd>Neorg workspace notes<CR>", opts({ desc = "Go to Neorg Notes Workspace" }))
+nmap({ "<leader>zn", "<cmd>Neorg workspace notes<CR>", opts({ desc = "Go to Neorg Notes Workspace" }) })
 
 -- Toggle Symbols Outline
-keymap.set("n", "<leader>zo", "<cmd>Outline<CR>", opts({ desc = "Toggle Symbols Outline" }))
+nmap({ "<leader>zo", "<cmd>Outline<CR>", opts({ desc = "Toggle Symbols Outline" }) })
 
 -- Open Oil
-keymap.set("n", "-", "<cmd>Oil --float<CR>", opts({ desc = "Open Parent Directory" }))
+nmap({ "-", "<cmd>Oil --float<CR>", opts({ desc = "Open Parent Directory" }) })
 
 -- Make current file executable
-keymap.set("n", "<leader>zx", genghis.chmodx, opts({ desc = "Make Current File Executable" }))
+nmap({ "<leader>zx", genghis.chmodx, opts({ desc = "Make Current File Executable" }) })

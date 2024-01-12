@@ -1,6 +1,6 @@
 return {
   -- luacheck: ignore
-  -- Add emoji support to nvim-cmp
+  -- Add calculation support to nvim-cmp
   {
     "hrsh7th/nvim-cmp",
     dependencies = { "hrsh7th/cmp-calc" },
