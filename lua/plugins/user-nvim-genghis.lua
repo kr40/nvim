@@ -3,6 +3,9 @@ return {
   {
     "chrisgrieser/nvim-genghis",
     dependencies = "stevearc/dressing.nvim",
+    keys = {
+      { "<leader>zx", "<cmd>Chmodx<CR>", mode = { "n" }, desc = "Make Current File Executable" },
+    },
     cmd = {
       "New", -- Create a new file
       "Duplicate", -- Duplicate the current file

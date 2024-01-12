@@ -3,9 +3,6 @@
 -- Add any additional keymaps here
 -- luacheck: ignore
 
--- Require Genghis for chmodx
-local genghis = require("genghis")
-
 -- Require custom keymap functions
 local opts = require("config.customkey").opts
 local nmap = require("config.customkey").nmap
@@ -59,6 +56,3 @@ nmap({ "<leader>zo", "<cmd>Outline<CR>", opts({ desc = "Toggle Symbols Outline" 
 
 -- Open Oil
 nmap({ "-", "<cmd>Oil --float<CR>", opts({ desc = "Open Parent Directory" }) })
-
--- Make current file executable
-nmap({ "<leader>zx", genghis.chmodx, opts({ desc = "Make Current File Executable" }) })
