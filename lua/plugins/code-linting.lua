@@ -7,8 +7,6 @@ return {
       events = { "BufWritePost", "BufReadPost", "InsertLeave" },
       linters_by_ft = {
         fish = { "fish" },
-        sh = { "shellcheck" },
-        bash = { "shellcheck" },
         python = { "flake8" },
         lua = { "luacheck" },
         -- Use the "*" filetype to run linters on all filetypes.

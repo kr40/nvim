@@ -37,6 +37,7 @@ return {
             "auto%-cpufreq/.*",
             "%.deb",
             "luarocks%-*",
+            "lazygit",
           },
 
           -- open files in the first window that is an actual file.
