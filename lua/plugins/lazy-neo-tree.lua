@@ -29,7 +29,7 @@ return {
         },
       },
       filesystem = {
-        hijack_netrw_behavior = "open_current",
+        hijack_netrw_behavior = "disabled",
         filtered_items = {
           visible = false, -- when true, they will just be displayed differently than normal items
           hide_dotfiles = false,
