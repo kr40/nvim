@@ -1,7 +1,7 @@
 return {
   -- luacheck: ignore
   -- Add dictionary support to nvim-cmp
-  {
+  --[[ {
     "hrsh7th/nvim-cmp",
     dependencies = { "uga-rosa/cmp-dictionary" },
     ---@param opts cmp.ConfigSchema
@@ -27,5 +27,5 @@ return {
 
       opts.sources = cmp.config.sources(vim.list_extend(opts.sources, { { name = "dictionary", keyword_length = 6 } }))
     end,
-  },
+  }, ]]
 }

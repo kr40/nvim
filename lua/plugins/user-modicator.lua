@@ -3,7 +3,7 @@ return {
   {
     "mawkler/modicator.nvim",
     dependencies = "catppuccin/nvim",
-    event = "LazyFile",
+    event = "VeryLazy",
     --[[ init = function()
       vim.o.cursorline = true
       vim.o.number = true

@@ -3,6 +3,7 @@ return {
   -- Adding lspkind icons to completion items and changing the look of the completion popup
   {
     "hrsh7th/nvim-cmp",
+    event = "CmdlineEnter",
     dependencies = {
       "onsails/lspkind.nvim",
     },

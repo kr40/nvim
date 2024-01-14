@@ -5,7 +5,7 @@ return {
     "ThePrimeagen/harpoon",
     branch = "harpoon2",
     dependencies = { "nvim-lua/plenary.nvim" },
-    event = "LazyFile",
+    event = "VeryLazy",
     config = function()
       local harpoon = require("harpoon")
       local nmap = require("config.customkey").nmap

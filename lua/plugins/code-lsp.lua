@@ -2,6 +2,9 @@ return {
   -- Setup language servers
   {
     "neovim/nvim-lspconfig",
+    event = function()
+      return "VeryLazy"
+    end,
     opts = {
       servers = {
         pyright = {},

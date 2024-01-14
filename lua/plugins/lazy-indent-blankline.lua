@@ -2,6 +2,9 @@ return {
   -- Setup scope for indent-blankline
   {
     "lukas-reineke/indent-blankline.nvim",
+    event = function()
+      return "VeryLazy"
+    end,
     opts = {
       indent = {
         char = "▏",

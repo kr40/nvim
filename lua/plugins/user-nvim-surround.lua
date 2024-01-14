@@ -10,7 +10,7 @@ return {
   {
     "kylechui/nvim-surround",
     version = "*",
-    event = "LazyFile",
+    event = "VeryLazy",
     opts = {},
   },
 }

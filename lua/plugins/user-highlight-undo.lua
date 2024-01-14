@@ -2,7 +2,7 @@ return {
   -- Highlight text changes after undo/redo
   {
     "tzachar/highlight-undo.nvim",
-    event = "LazyFile",
+    event = "VeryLazy",
     opts = {
       duration = 300,
       undo = {
