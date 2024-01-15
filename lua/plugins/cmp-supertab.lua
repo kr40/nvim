@@ -1,7 +1,7 @@
 return {
   -- luacheck: ignore
   -- Enable super-tab for nvim-cmp
-  {
+  --[[ {
     "hrsh7th/nvim-cmp",
     ---@param opts cmp.ConfigSchema
     opts = function(_, opts)
@@ -41,5 +41,5 @@ return {
         end, { "i", "s" }),
       })
     end,
-  },
+  }, ]]
 }

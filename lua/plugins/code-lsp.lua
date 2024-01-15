@@ -5,6 +5,11 @@ return {
     event = function()
       return "VeryLazy"
     end,
+    init = function()
+      local keys = require("lazyvim.plugins.lsp.keymaps").get()
+      -- disabled <C-k>
+      keys[#keys + 1] = { "<c-k>", mode = "i", false }
+    end,
     opts = {
       servers = {
         pyright = {},
