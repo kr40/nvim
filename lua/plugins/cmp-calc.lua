@@ -1,6 +1,6 @@
 return {
   -- luacheck: ignore
-  -- Add calculation support to nvim-cmp
+  -- Add calculation support source to nvim-cmp
   {
     "hrsh7th/nvim-cmp",
     dependencies = { "hrsh7th/cmp-calc" },

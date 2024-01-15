@@ -1,5 +1,5 @@
 return {
-  -- Setup which-key
+  -- Added "a" for harpoon, Added "z" for user
   {
     "folke/which-key.nvim",
     event = "VeryLazy",

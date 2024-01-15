@@ -1,5 +1,5 @@
 return {
-  -- Add cmdline support to nvim-cmp
+  -- Add cmdline support source to nvim-cmp
   {
     "hrsh7th/nvim-cmp",
     dependencies = { "hrsh7th/cmp-cmdline" },

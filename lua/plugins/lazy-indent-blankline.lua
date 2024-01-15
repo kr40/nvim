@@ -1,5 +1,5 @@
 return {
-  -- Setup scope for indent-blankline
+  -- Setup scope for indent-blankline (excluded python), changed event to VeryLazy
   {
     "lukas-reineke/indent-blankline.nvim",
     event = function()

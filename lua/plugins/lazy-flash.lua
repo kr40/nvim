@@ -1,17 +1,16 @@
 return {
-  -- Flash to jump to the next occurrence of the word under the cursor
+  -- Changed the default keybinding to <C-;>, disabled other keybindings
   {
     "folke/flash.nvim",
     keys = {
       {
-        ";",
+        "<C-;>",
         mode = { "n", "x", "o" },
         function()
           require("flash").jump()
         end,
         desc = "Flash",
       },
-      { ",", mode = { "n", "x", "o" }, false },
       { "s", mode = { "n", "x", "o" }, false },
       { "S", mode = { "n", "x", "o" }, false },
       { "r", mode = "o", false },
@@ -21,7 +20,7 @@ return {
     opts = {
       modes = {
         char = {
-          keys = { "f", "F", "t", "T" },
+          keys = { "f", "F", "t", "T", ",", ";" },
         },
       },
     },

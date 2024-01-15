@@ -1,5 +1,5 @@
 return {
-  -- Add Neorg support to nvim-cmp
+  -- Add Neorg support source to nvim-cmp
   {
     "hrsh7th/nvim-cmp",
     ---@param opts cmp.ConfigSchema

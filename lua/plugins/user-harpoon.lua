@@ -1,6 +1,6 @@
 return {
   -- luacheck: ignore
-  -- Fast file navigation
+  -- Fast file navigation (Uses SPC a)
   {
     "ThePrimeagen/harpoon",
     branch = "harpoon2",

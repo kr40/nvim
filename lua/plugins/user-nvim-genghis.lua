@@ -1,5 +1,5 @@
 return {
-  -- File management plugin for Neovim
+  -- File management plugin for Neovim (Uses SPC zx for Chmodx)
   {
     "chrisgrieser/nvim-genghis",
     dependencies = "stevearc/dressing.nvim",

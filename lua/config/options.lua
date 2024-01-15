@@ -12,7 +12,7 @@ opt.swapfile = false
 -- Disable backup
 opt.backup = false
 
--- Disabe writebackup
+-- Disable writebackup
 opt.writebackup = false
 
 -- Color 120th column

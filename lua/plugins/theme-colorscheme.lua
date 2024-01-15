@@ -1,5 +1,5 @@
 return {
-  -- Set Tokyonight as the default colorscheme
+  -- Catppuccin as the default colorscheme
   {
     "LazyVim/LazyVim",
     opts = {

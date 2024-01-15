@@ -1,5 +1,5 @@
 return {
-  -- Better increment and decrement plugin
+  -- Better increment and decrement plugin (Replaces <C-a> and <C-x>)
   {
     "monaqa/dial.nvim",
     -- stylua: ignore

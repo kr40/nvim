@@ -1,5 +1,5 @@
 return {
-  -- Snippet engine for Neovim
+  -- Snippet engine for Neovim, Added event for lazy loading
   {
     "L3MON4D3/LuaSnip",
     event = "VeryLazy",

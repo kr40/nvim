@@ -1,5 +1,5 @@
 return {
-  -- Added new text objects Return, Parameter, Number
+  -- Added new text objects Number, Return, Parameter, Call, Key, Value
   {
     "echasnovski/mini.ai",
     -- keys = {
@@ -21,6 +21,9 @@ return {
           N = ai.gen_spec.treesitter({ a = "@number.outer", i = "@number.inner" }, {}),
           R = ai.gen_spec.treesitter({ a = "@return.outer", i = "@return.inner" }, {}),
           P = ai.gen_spec.treesitter({ a = "@parameter.outer", i = "@parameter.inner" }, {}),
+          C = ai.gen_spec.treesitter({ a = "@call.outer", i = "@call.inner" }, {}),
+          k = ai.gen_spec.treesitter({ a = "@assignment.inner", i = "@assignment.lhs" }, {}),
+          v = ai.gen_spec.treesitter({ a = "@assignment.outer", i = "@assignment.rhs" }, {}),
           t = { "<([%p%w]-)%f[^<%w][^<>]->.-</%1>", "^<.->().*()</[^/]->$" },
         },
       }
@@ -48,6 +51,7 @@ return {
           a = "Argument",
           b = "Balanced ), ], }",
           c = "Class",
+          i = "Object",
           f = "Function",
           o = "Block, conditional, loop",
           q = "Quote `, \", '",
@@ -55,6 +59,9 @@ return {
           N = "Number",
           R = "Return",
           P = "Parameter",
+          C = "Call",
+          k = "Assignment Key",
+          v = "Assignment Value",
         }
         local a = vim.deepcopy(i)
         for k, v in pairs(a) do

@@ -1,5 +1,5 @@
 return {
-  -- Autopairs plugin for nvim
+  -- Autopairs plugin for nvim (Uses Alt e for fast wrap)
   {
     "windwp/nvim-autopairs",
     event = "VeryLazy",

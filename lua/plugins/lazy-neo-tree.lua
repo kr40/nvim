@@ -1,5 +1,5 @@
 return {
-  -- File explorer for Neovim written in lua
+  -- Changed windows position to right, excluded some directories
   {
     "nvim-neo-tree/neo-tree.nvim",
     opts = {

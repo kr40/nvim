@@ -1,5 +1,5 @@
 return {
-  -- Automatically close and rename HTML tags
+  -- Changed event to VeryLazy
   {
     "windwp/nvim-ts-autotag",
     event = function()

@@ -1,6 +1,6 @@
 return {
   -- luacheck: ignore
-  -- Dashboard plugin for Neovim
+  -- Added notes section to Dashboard
   {
     "nvimdev/dashboard-nvim",
     opts = function()

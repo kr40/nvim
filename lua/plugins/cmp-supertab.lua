@@ -1,6 +1,6 @@
 return {
   -- luacheck: ignore
-  -- Enable super-tab for cmp
+  -- Enable super-tab for nvim-cmp
   {
     "hrsh7th/nvim-cmp",
     ---@param opts cmp.ConfigSchema

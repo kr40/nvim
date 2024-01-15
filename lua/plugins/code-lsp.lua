@@ -1,5 +1,5 @@
 return {
-  -- Setup language servers
+  -- Setup language servers, Changed event to VeryLazy
   {
     "neovim/nvim-lspconfig",
     event = function()

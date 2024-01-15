@@ -1,5 +1,5 @@
 return {
-  -- Replaces UI for messages, cmdline and popupmenu
+  -- Changed max height to 5 lines
   {
     "folke/noice.nvim",
     opts = {

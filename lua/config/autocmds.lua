@@ -11,3 +11,11 @@ vim.api.nvim_create_autocmd("FileType", {
     vim.opt.conceallevel = 0
   end,
 })
+
+-- Disable comment continuation
+vim.api.nvim_create_autocmd("FileType", {
+  desc = "remove formatoptions",
+  callback = function()
+    vim.opt.formatoptions:remove({ "c", "r", "o" })
+  end,
+})

@@ -1,5 +1,5 @@
 return {
-  -- Changed symbol to be the same as indent-blankline
+  -- Changed symbol to be the same as indent-blankline, changed event to VeryLazy
   {
     "echasnovski/mini.indentscope",
     event = function()

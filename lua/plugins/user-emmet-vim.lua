@@ -1,5 +1,5 @@
 return {
-  -- Emmet plugin (Uses <C-y> normal mode)
+  -- Emmet plugin (Uses "<C-y>," in normal mode to expand abbreviations)
   {
     "mattn/emmet-vim",
     ft = {
