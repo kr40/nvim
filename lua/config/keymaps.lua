@@ -28,7 +28,7 @@ nmap({ "<leader>zp", [[:r!]], opts({ desc = "Run Command and Paste Output" }) })
 -- Delete into the void register
 nxmap({ "<leader>zd", [["_d]], opts({ desc = "Delete Into The Void Register" }) })
 
--- Correct to last typo in insert mode
+-- Correct the last typo in insert mode
 imap({ "<C-l>", "<c-g>u<Esc>[s1z=`]a<c-g>u", opts({ desc = "Correct last typo" }) })
 
 ----------------------------------------------- Plugin Mappings -------------------------------------------------------

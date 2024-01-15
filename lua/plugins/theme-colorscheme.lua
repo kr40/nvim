@@ -1,5 +1,5 @@
 return {
-  -- Catppuccin as the default colorscheme
+  -- Set Catppuccin as the default colorscheme
   {
     "LazyVim/LazyVim",
     opts = {

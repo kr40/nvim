@@ -46,6 +46,8 @@ return {
             },
             -- Disable for tex
             tex = false,
+            -- Disable for python
+            python = false,
           },
         })
       )

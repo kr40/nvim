@@ -7,7 +7,6 @@ return {
       vim.list_extend(opts.ensure_installed, {
         "stylua",
         "shfmt",
-        "flake8",
         "lua-language-server",
         "black",
         "pyright",
