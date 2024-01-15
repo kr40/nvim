@@ -7,7 +7,7 @@ return {
     ---@param opts cmp.ConfigSchema
     opts = function(_, opts)
       local cmp = require("cmp")
-      local dict = require("cmp_dictionary")
+      --[[ local dict = require("cmp_dictionary")
 
       dict.setup({
         exact = 5,
@@ -24,7 +24,7 @@ return {
           en = "~/.config/nvim/spell/en.dict",
         },
       })
-
+]]
       opts.sources = cmp.config.sources(vim.list_extend(opts.sources, { { name = "dictionary", keyword_length = 6 } }))
     end,
   },
