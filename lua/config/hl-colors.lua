@@ -1,7 +1,6 @@
 -- luacheck: ignore
--- Colors for lspkind icons for nvim-cmp
-
 vim.schedule(function()
+  -- Highlighting for lspkind icons for nvim-cmp
   vim.api.nvim_set_hl(0, "PmenuSel", { bg = "#282C34", fg = "NONE" })
   vim.api.nvim_set_hl(0, "Pmenu", { fg = "#C5CDD9", bg = "#22252A" })
 
@@ -44,4 +43,7 @@ vim.schedule(function()
   vim.api.nvim_set_hl(0, "CmpItemKindTypeParameter", { fg = "#D8EEEB", bg = "#58B5A8" })
 
   vim.api.nvim_set_hl(0, "CmpItemKindCopilot", { fg = "#6CC644", bg = "#0f1c0a" })
+
+  -- Highlighing for Matching Parenthesis
+  vim.api.nvim_set_hl(0, "MatchParen", { fg = "black", bg = "#65bcff" })
 end)

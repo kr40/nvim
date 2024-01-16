@@ -12,7 +12,8 @@ return {
       },
       scope = {
         enabled = true,
-        show_exact_scope = true,
+        highlight = "MiniIndentscopeSymbol",
+        char = "▏",
         exclude = {
           language = {
             { "python" },

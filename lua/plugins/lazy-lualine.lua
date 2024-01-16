@@ -6,6 +6,7 @@ return {
     opts = function(_, opts)
       opts.options = {
         disabled_filetypes = { statusline = { "dashboard", "alpha", "starter", "netrw" } },
+        theme = "tokyonight",
       }
       table.insert(opts.sections.lualine_x, 3, function()
         local clients = function()
