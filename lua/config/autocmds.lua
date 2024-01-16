@@ -199,17 +199,17 @@ local function draw_icons()
   end
 end
 
--- vim.api.nvim_create_autocmd("FileType", {
---   pattern = { "netrw" },
---   callback = function()
---     draw_icons()
---     netrw_maps()
---   end,
--- })
---
--- vim.api.nvim_create_autocmd("TextChanged", {
---   pattern = { "*" },
---   callback = function()
---     draw_icons()
---   end,
--- })
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = { "netrw" },
+  callback = function()
+    draw_icons()
+    netrw_maps()
+  end,
+})
+
+vim.api.nvim_create_autocmd("TextChanged", {
+  pattern = { "*" },
+  callback = function()
+    draw_icons()
+  end,
+})
