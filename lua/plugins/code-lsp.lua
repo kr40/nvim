@@ -7,7 +7,7 @@ return {
     end,
     init = function()
       local keys = require("lazyvim.plugins.lsp.keymaps").get()
-      -- disabled <C-k>
+      -- disabled <C-k> keymap
       keys[#keys + 1] = { "<c-k>", mode = "i", false }
     end,
     opts = {

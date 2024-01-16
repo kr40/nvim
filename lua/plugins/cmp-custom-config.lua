@@ -7,13 +7,13 @@ return {
       return "VeryLazy"
     end,
     dependencies = {
-      "onsails/lspkind.nvim",
+      "onsails/lspkind.nvim", -- Added lspkind icons
     },
     opts = function(_, opts)
       local cmp = require("cmp")
 
       opts.completion = {
-        completeopt = "menu,menuone,noinsert,noselect", -- Added no select to prevent auto select
+        completeopt = "menu,menuone,noinsert,noselect", -- Added noselect to prevent auto select
       }
 
       opts.mapping = cmp.mapping.preset.insert({
