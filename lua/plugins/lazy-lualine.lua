@@ -4,6 +4,9 @@ return {
   {
     "nvim-lualine/lualine.nvim",
     opts = function(_, opts)
+      opts.options = {
+        disabled_filetypes = { statusline = { "dashboard", "alpha", "starter", "netrw" } },
+      }
       table.insert(opts.sections.lualine_x, 3, function()
         local clients = function()
           -- Include LSP clients from nvim-lspconfig

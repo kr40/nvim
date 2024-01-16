@@ -2,7 +2,6 @@ return {
   -- Configure the catppuccin theme
   {
     "catppuccin/nvim",
-    lazy = true,
     name = "catppuccin",
     opts = {
       transparent_background = false, -- disables setting the background color.
@@ -20,12 +19,12 @@ return {
         comments = { "italic" }, -- Change the style of comments
         conditionals = { "italic" },
         loops = {},
-        functions = {},
+        functions = { "italic" },
         keywords = {},
-        strings = {},
-        variables = {},
-        numbers = {},
-        booleans = {},
+        strings = { "italic" },
+        variables = { "italic" },
+        numbers = { "bold" },
+        booleans = { "bold" },
         properties = {},
         types = {},
         operators = {},
