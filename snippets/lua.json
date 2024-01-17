@@ -1,10 +1,6 @@
 {
   "func": {
-    "body": [
-      "local function ${1}()",
-      "\treturn ${2}",
-      "end"
-    ],
+    "body": ["local function ${1}()", "\treturn ${2}", "end"],
     "filetype": "lua",
     "prefix": "func"
   },

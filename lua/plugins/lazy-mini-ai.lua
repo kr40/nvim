@@ -1,4 +1,5 @@
 return {
+  -- luacheck: ignore
   -- Added new text objects Number, Return, Parameter, Call, Key, Value
   {
     "echasnovski/mini.ai",

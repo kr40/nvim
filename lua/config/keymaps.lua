@@ -9,6 +9,7 @@ local nmap = require("config.customkey").nmap
 local imap = require("config.customkey").imap
 local xmap = require("config.customkey").xmap
 local nxmap = require("config.customkey").nxmap
+local dnvmap = require("config.customkey").dnvmap
 
 -- Regex to rename all occurrences of the word under the cursor
 local rename = [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]]
@@ -56,3 +57,8 @@ nmap({ "<leader>zo", "<cmd>Outline<CR>", opts({ desc = "Toggle Symbols Outline" 
 
 -- Open Oil
 nmap({ "-", "<cmd>Oil --float<CR>", opts({ desc = "Open Parent Directory" }) })
+
+----------------------------------------------- Deleted Mappings ------------------------------------------------------
+
+dnvmap({ "<A-j>" }) -- Adding mini.move
+dnvmap({ "<A-k>" }) -- Adding mini.move

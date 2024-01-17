@@ -1,22 +1,30 @@
 return {
+  -- luacheck: ignore
   -- Snippet management plugin for Neovim (Uses SPC zs and SPC ze)
   {
     "chrisgrieser/nvim-scissors",
     -- dependencies = "nvim-telescope/telescope.nvim",
     opts = {
-      snippetDir = "/home/kr40/.config/nvim/snippets/",
+      snippetDir = vim.fn.stdpath("config") .. "/snippets",
       editSnippetPopup = {
         height = 0.4, -- relative to the window, number between 0 and 1
         width = 0.6,
         border = "rounded",
         keymaps = {
           cancel = "q",
-          saveChanges = "<CR>",
+          saveChanges = "<CR>", -- alternatively, can also use `:w`
           goBackToSearch = "<BS>",
-          delete = "<C-BS>",
+          deleteSnippet = "<C-BS>",
+          duplicateSnippet = "<C-d>",
           openInFile = "<C-o>",
-          insertNextToken = "<C-t>", -- works in insert & normal mode
+          insertNextToken = "<C-t>", -- insert & normal mode
+          jumpBetweenBodyAndPrefix = "<C-Tab>", -- insert & normal mode
         },
+      },
+      telescope = {
+        -- By default, the query only searches snippet prefixes. Set this to
+        -- `true` to also search the body of the snippets.
+        alsoSearchSnippetBody = true,
       },
       -- `none` writes as a minified json file using `:h vim.encode.json`.
       -- `yq`/`jq` ensure formatted & sorted json files, which is relevant when

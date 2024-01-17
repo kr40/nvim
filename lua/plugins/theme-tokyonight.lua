@@ -1,4 +1,5 @@
 return {
+  -- Set styles for comments, keywords, function and variables
   {
     "folke/tokyonight.nvim",
     opts = {

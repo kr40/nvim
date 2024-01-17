@@ -1,8 +1,28 @@
 return {
   -- luacheck: ignore
-  -- Setup telescope to ignore certain files
+  -- Setup telescope to ignore certain files, added Telescope extensions (Undo)
   {
     "nvim-telescope/telescope.nvim",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      "debugloop/telescope-undo.nvim",
+    },
+    keys = {
+      {
+        "<leader>fp",
+        function()
+          require("telescope.builtin").find_files({ cwd = require("lazy.core.config").options.root })
+        end,
+        desc = "Find Plugin File",
+      },
+      {
+        "<leader>su",
+        function()
+          require("telescope").extensions.undo.undo()
+        end,
+        desc = "Undo History",
+      },
+    },
     opts = function()
       local actions = require("telescope.actions")
       local Util = require("lazyvim.util")
@@ -24,6 +44,9 @@ return {
         Util.telescope("find_files", { hidden = true, default_text = line })()
       end
 
+      -- Load Telescope Extensions
+      require("telescope").load_extension("undo")
+
       return {
         defaults = {
           prompt_prefix = " ",
@@ -43,6 +66,36 @@ return {
             "Downloads/.*",
             "Pictures/.*",
             "Movies/.*",
+          },
+          extensions = {
+            undo = {
+              use_delta = true,
+              use_custom_command = nil, -- setting this implies `use_delta = false`. Accepted format is: { "bash", "-c", "echo '$DIFF' | delta" }
+              side_by_side = true,
+              diff_context_lines = vim.o.scrolloff,
+              entry_format = "state #$ID, $STAT, $TIME",
+              time_format = "",
+              saved_only = false,
+              layout_strategy = "vertical",
+              layout_config = {
+                preview_height = 0.8,
+              },
+              mappings = {
+                i = {
+                  ["<cr>"] = require("telescope-undo.actions").yank_additions,
+                  ["<S-cr>"] = require("telescope-undo.actions").yank_deletions,
+                  ["<C-cr>"] = require("telescope-undo.actions").restore,
+                  -- alternative defaults, for users whose terminals do questionable things with modified <cr>
+                  ["<C-y>"] = require("telescope-undo.actions").yank_deletions,
+                  ["<C-r>"] = require("telescope-undo.actions").restore,
+                },
+                n = {
+                  ["y"] = require("telescope-undo.actions").yank_additions,
+                  ["Y"] = require("telescope-undo.actions").yank_deletions,
+                  ["u"] = require("telescope-undo.actions").restore,
+                },
+              },
+            },
           },
 
           -- open files in the first window that is an actual file.

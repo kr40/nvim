@@ -6,4 +6,6 @@ return {
   { "hrsh7th/cmp-nvim-lua", enabled = false }, -- Only when using the nvim lua api
   { "hrsh7th/cmp-emoji", enabled = false }, -- Not really a need right now
   { "uga-rosa/cmp-dictionary", enabled = false }, -- Will use if really needed (Uncomment the cmp-dictionary file)
+  -- { "abecodes/tabout.nvim", enabled = false },
+  -- { "kawre/neotab.nvim", enabled = false },
 }

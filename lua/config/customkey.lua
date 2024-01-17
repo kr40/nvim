@@ -1,3 +1,5 @@
+-- luacheck: ignore
+-- Custom Keymap functions
 local M = {}
 
 -- Function to shorten keymap options
@@ -23,6 +25,18 @@ end
 
 M.inmap = function(tbl)
   vim.keymap.set({ "i", "n" }, tbl[1], tbl[2], tbl[3])
+end
+
+M.dnmap = function(tbl)
+  vim.keymap.del("n", tbl[1])
+end
+
+M.dvmap = function(tbl)
+  vim.keymap.del("v", tbl[1])
+end
+
+M.dnvmap = function(tbl)
+  vim.keymap.del({ "n", "v" }, tbl[1])
 end
 
 return M
