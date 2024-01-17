@@ -3,6 +3,7 @@ return {
   {
     "nvim-neo-tree/neo-tree.nvim",
     opts = {
+      close_if_last_window = true,
       window = {
         position = "right", -- Change the position of the window to right
         width = 40,

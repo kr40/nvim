@@ -11,6 +11,29 @@ local xmap = require("config.customkey").xmap
 local nxmap = require("config.customkey").nxmap
 local dnvmap = require("config.customkey").dnvmap
 
+-- Close all open buffers before opening dashboard
+local openDashboard = function()
+  for _, bufnr in ipairs(vim.api.nvim_list_bufs()) do
+    local buftype = vim.api.nvim_buf_get_option(bufnr, "buftype")
+    if buftype ~= "terminal" then
+      local bd = require("bufdelete").bufdelete
+      if vim.bo.modified then
+        local choice = vim.fn.confirm(("Save changes to %q?"):format(vim.fn.bufname()), "&Yes\n&No\n&Cancel")
+        if choice == 1 then -- Yes
+          vim.cmd.write()
+          bd(0)
+        elseif choice == 2 then -- No
+          bd(0, true)
+        elseif choice == 3 then -- Cancel
+          break
+        end
+      end
+      bd(0)
+    end
+  end
+  vim.cmd.Dashboard()
+end
+
 -- Regex to rename all occurrences of the word under the cursor
 local rename = [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]]
 
@@ -35,7 +58,7 @@ imap({ "<C-l>", "<c-g>u<Esc>[s1z=`]a<c-g>u", opts({ desc = "Correct last typo" }
 ----------------------------------------------- Plugin Mappings -------------------------------------------------------
 
 -- Open Dashboard
-nmap({ "<leader>;", "<cmd>Dashboard<CR>", opts({ desc = "Open Dashboard" }) })
+nmap({ "<leader>;", openDashboard, opts({ desc = "Open Dashboard" }) })
 
 -- Toggle Treesj
 nmap({ "<leader>zm", "<cmd>TSJToggle<CR>", opts({ desc = "Toggle Split/Join Code Block" }) })

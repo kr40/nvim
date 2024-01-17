@@ -16,12 +16,26 @@ vim.api.nvim_create_autocmd("FileType", {
 vim.api.nvim_create_autocmd("FileType", {
   desc = "remove formatoptions",
   callback = function()
-    vim.opt.formatoptions:remove({ "c", "r", "o" })
+    vim.opt.formatoptions:remove({ "r", "o" })
+  end,
+})
+
+-- Open Dashboard after deleting the last buffer (Uses bufdelete plugin)
+vim.api.nvim_create_augroup("dashboard_on_empty", { clear = true })
+vim.api.nvim_create_autocmd("User", {
+  pattern = "BDeletePre *",
+  group = "dashboard_on_empty",
+  callback = function()
+    local bufnr = vim.api.nvim_get_current_buf()
+    local name = vim.api.nvim_buf_get_name(bufnr)
+
+    if name == "" then
+      vim.cmd.Dashboard()
+    end
   end,
 })
 
 -- Netrw
-
 local is_empty = function(str)
   return str == "" or str == nil
 end

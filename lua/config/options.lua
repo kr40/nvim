@@ -2,6 +2,7 @@
 -- Default options that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/options.lua
 -- Add any additional options here
 -- luacheck: ignore
+---@diagnostic disable: assign-type-mismatch
 
 -- Shorten vim.opt to opt
 local opt = vim.opt
@@ -18,8 +19,11 @@ opt.writebackup = false
 -- Color 120th column
 opt.colorcolumn = "120"
 
--- Enable line wrap
+-- Enable line wrap, and make it so that long lines wrap smartly
 opt.wrap = true
+opt.breakindent = true
+opt.showbreak = string.rep(" ", 3)
+opt.linebreak = true
 
 -- Set encoding to utf-8
 vim.scriptencoding = "utf-8"
