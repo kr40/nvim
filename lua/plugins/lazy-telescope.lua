@@ -16,6 +16,13 @@ return {
         desc = "Find Plugin File",
       },
       {
+        "<leader>fB",
+        function()
+          require("telescope.builtin").builtin()
+        end,
+        desc = "Find Builtins List",
+      },
+      {
         "<leader>su",
         function()
           require("telescope").extensions.undo.undo()
