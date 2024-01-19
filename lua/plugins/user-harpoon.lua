@@ -71,7 +71,7 @@ return {
       k.nmap({
         "<leader>a[",
         function()
-          harpoon:list():prev()
+          harpoon:list():prev({ ui_nav_wrap = true })
         end,
         opts({ desc = "Previous Harpoon File" }),
       })
@@ -80,7 +80,7 @@ return {
       k.nmap({
         "<leader>a]",
         function()
-          harpoon:list():next()
+          harpoon:list():next({ ui_nav_wrap = true })
         end,
         opts({ desc = "Next Harpoon File" }),
       })

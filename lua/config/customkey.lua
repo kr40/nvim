@@ -18,11 +18,12 @@ local function universal_del(modes, tbl)
 end
 
 -- Generate map and delmap functions for all mode combinations in ascending order
-local modes = { "i", "n", "v", "x" }
+local modes = { "i", "n", "v", "x", "o", "c" }
 
 -- Helper function to check if the mode is in ascending order
+---@diagnostic disable-next-line: redefined-local
 local function isInAscendingOrder(modes)
-  local order = { i = 1, n = 2, v = 3, x = 4 }
+  local order = { i = 1, n = 2, v = 3, x = 4, o = 5, c = 6 }
   for i = 1, #modes - 1 do
     if order[modes[i]] >= order[modes[i + 1]] then
       return false
