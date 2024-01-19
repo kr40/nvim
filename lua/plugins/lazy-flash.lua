@@ -1,5 +1,5 @@
 return {
-  --luacheck: ignore
+  -- luacheck: ignore
   -- Changed the default keybinding to <C-;>, disabled other keybindings
   {
     "folke/flash.nvim",
