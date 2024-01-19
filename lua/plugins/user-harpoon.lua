@@ -11,7 +11,7 @@ return {
     event = "VeryLazy",
     config = function()
       local harpoon = require("harpoon")
-      local nmap = require("config.customkey").nmap
+      local k = require("config.customkey")
       local opts = require("config.customkey").opts
 
       harpoon:setup({
@@ -41,7 +41,7 @@ return {
       end
 
       -- Telescope Harpoon List
-      nmap({
+      k.nmap({
         "<leader>at",
         function()
           toggle_telescope(harpoon:list())
@@ -50,7 +50,7 @@ return {
       })
 
       -- Append to Harpoon List
-      nmap({
+      k.nmap({
         "<leader>aa",
         function()
           harpoon:list():append()
@@ -59,7 +59,7 @@ return {
       })
 
       -- Display Harpoon List
-      nmap({
+      k.nmap({
         "<leader>al",
         function()
           harpoon.ui:toggle_quick_menu(harpoon:list())
@@ -68,7 +68,7 @@ return {
       })
 
       -- Go to Previous Harpoon File
-      nmap({
+      k.nmap({
         "<leader>a[",
         function()
           harpoon:list():prev()
@@ -77,7 +77,7 @@ return {
       })
 
       -- Go to Next Harpoon File
-      nmap({
+      k.nmap({
         "<leader>a]",
         function()
           harpoon:list():next()
@@ -87,7 +87,7 @@ return {
 
       -- Select Harpoon File from List (1-5)
       for i = 1, 5 do
-        nmap({
+        k.nmap({
           string.format("<C-%s>", i),
           function()
             harpoon:list():select(i)
