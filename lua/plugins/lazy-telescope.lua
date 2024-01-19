@@ -53,6 +53,7 @@ return {
 
       -- Load Telescope Extensions
       require("telescope").load_extension("undo")
+      require("telescope").load_extension("neoclip")
 
       return {
         defaults = {
