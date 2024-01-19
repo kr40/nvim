@@ -5,5 +5,13 @@ return {
     event = function()
       return "VeryLazy"
     end,
+    opts = {
+      filetypes_denylist = {
+        "dirbuf",
+        "dirvish",
+        "fugitive",
+        "dashboard",
+      },
+    },
   },
 }
