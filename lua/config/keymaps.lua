@@ -4,8 +4,8 @@
 -- luacheck: ignore
 
 -- Require custom keymap functions
-local opts = require("config.customkey").opts
-local k = require("config.customkey")
+local opts = require("config.user.customkey").opts
+local k = require("config.user.customkey")
 
 -- Regex to rename all occurrences of the word under the cursor
 local rename = [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]]

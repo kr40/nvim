@@ -11,8 +11,8 @@ return {
     event = "VeryLazy",
     config = function()
       local harpoon = require("harpoon")
-      local k = require("config.customkey")
-      local opts = require("config.customkey").opts
+      local k = require("config.user.customkey")
+      local opts = require("config.user.customkey").opts
 
       harpoon:setup({
         settings = {
