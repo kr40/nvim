@@ -2,3 +2,4 @@
 require("config.lazy")
 require("config.hl-colors")
 require("config.netrw")
+require("config.utils")

@@ -4,6 +4,16 @@ return {
     "utilyre/barbecue.nvim",
     event = "VeryLazy",
     name = "barbecue",
+    keys = {
+      {
+        "<leader>zb",
+        "<cmd>Barbecue toggle<CR>",
+        mode = "n",
+        noremap = true,
+        silent = true,
+        desc = "Toggle Undotree",
+      },
+    },
     version = "*",
     dependencies = {
       "SmiteshP/nvim-navic",

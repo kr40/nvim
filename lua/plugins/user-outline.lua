@@ -3,6 +3,16 @@ return {
   {
     "hedyhli/outline.nvim",
     cmd = "Outline",
+    keys = {
+      {
+        "<leader>zo",
+        "<cmd>Outline<CR>",
+        mode = "n",
+        noremap = true,
+        silent = true,
+        desc = "Toggle Symbols Outline",
+      },
+    },
     opts = {},
   },
 }

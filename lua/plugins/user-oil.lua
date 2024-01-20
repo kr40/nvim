@@ -4,6 +4,16 @@ return {
     "stevearc/oil.nvim",
     dependencies = { "nvim-tree/nvim-web-devicons" },
     cmd = "Oil",
+    keys = {
+      {
+        "-",
+        "<cmd>Oil --float<CR>",
+        mode = "n",
+        noremap = true,
+        silent = true,
+        desc = "Oil",
+      },
+    },
     opts = {
       -- Oil will take over directory buffers (e.g. `vim .` or `:e src/`)
       -- Set to false if you still want to use netrw.

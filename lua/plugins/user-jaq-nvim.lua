@@ -3,6 +3,16 @@ return {
   {
     "is0n/jaq-nvim",
     cmd = "Jaq",
+    keys = {
+      {
+        "<leader>zc",
+        "<cmd>Jaq<CR>",
+        mode = "n",
+        noremap = true,
+        silent = true,
+        desc = "Run Code",
+      },
+    },
     opts = {
       cmds = {
         -- Uses vim commands

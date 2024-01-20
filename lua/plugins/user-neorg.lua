@@ -6,6 +6,16 @@ return {
     -- tag = "*",
     dependencies = { "nvim-lua/plenary.nvim" },
     ft = "norg",
+    keys = {
+      {
+        "<leader>zn",
+        "<cmd>Neorg workspace notes<CR>",
+        mode = "n",
+        noremap = true,
+        silent = true,
+        desc = "Go to Neorg Notes Workspace",
+      },
+    },
     cmd = "Neorg",
     opts = {
       load = {

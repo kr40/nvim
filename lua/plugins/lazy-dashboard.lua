@@ -3,6 +3,19 @@ return {
   -- Added notes section to Dashboard
   {
     "nvimdev/dashboard-nvim",
+    keys = {
+      {
+        "<leader>;",
+        function()
+          local dashboard = require("config.utils").openDashboard
+          dashboard()
+        end,
+        mode = "n",
+        noremap = true,
+        silent = true,
+        desc = "Open Dashboard",
+      },
+    },
     opts = function()
       local logo = [[
 	                                                                     
