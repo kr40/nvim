@@ -2,6 +2,9 @@ return {
   -- Setup linters
   {
     "mfussenegger/nvim-lint",
+    event = function()
+      return "VeryLazy"
+    end,
     opts = {
       -- Event to trigger linters
       events = { "BufWritePost", "BufReadPost", "InsertLeave" },

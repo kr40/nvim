@@ -32,6 +32,8 @@ return {
         "ak",
         "iv",
         "av",
+        "r",
+        "R",
       },
       lookForwardSmall = 500,
       lookForwardBig = 500,

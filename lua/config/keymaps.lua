@@ -26,7 +26,7 @@ k.nmap({ "<leader>zp", [[:r!]], opts({ desc = "Run Command and Paste Output" }) 
 k.nmap({ "<leader>zd", [["_d]], opts({ desc = "Delete Into The Void Register" }) })
 
 -- Correct the last typo in insert mode
-k.imap({ "<C-l>", "<c-g>u<Esc>[s1z=`]a<c-g>u", opts({ desc = "Correct last typo" }) })
+k.imap({ "<C-l>", "<c-g>u<Esc>[s1z=`]a<c-g>u", opts({ desc = "Correct Last Typo" }) })
 
 ----------------------------------------------- Deleted Mappings ------------------------------------------------------
 

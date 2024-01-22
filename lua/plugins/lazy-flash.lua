@@ -12,11 +12,20 @@ return {
         end,
         desc = "Flash",
       },
+      {
+        "<C-,>",
+        mode = { "n", "x", "o" },
+        function()
+          require("flash").treesitter()
+        end,
+        desc = "Flash Treesitter",
+      },
+      -- Disabled keybindings
       { "s", mode = { "n", "x", "o" }, false },
       { "S", mode = { "n", "x", "o" }, false },
-      { "r", mode = "o", false },
-      { "R", mode = { "x", "o" }, false },
-      { "<c-s>", mode = { "c" }, false },
+      -- { "r", mode = "o", false },
+      -- { "R", mode = { "x", "o" }, false },
+      -- { "<c-s>", mode = { "c" }, false },
     },
     opts = {
       -- labels = "abcdefghijklmnopqrstuvwxyz",
@@ -28,7 +37,6 @@ return {
         forward = true,
         -- when `false`, find only matches in the given direction
         wrap = true,
-        ---@type Flash.Pattern.Mode
         -- Each mode will take ignorecase and smartcase into account.
         -- * exact: exact match
         -- * search: regular search
@@ -42,7 +50,6 @@ return {
         -- behave like `incsearch`
         incremental = true,
         -- Excluded filetypes and custom window filters
-        ---@type (string|fun(win:window))[]
         exclude = {
           "notify",
           "cmp_menu",
@@ -116,12 +123,6 @@ return {
         },
         -- With `format`, you can change how the label is rendered.
         -- Should return a list of `[text, highlight]` tuples.
-        ---@class Flash.Format
-        ---@field state Flash.State
-        ---@field match Flash.Match
-        ---@field hl_group string
-        ---@field after boolean
-        ---@type fun(opts:Flash.Format): string[][]
         format = function(opts)
           return { { opts.match.label, opts.hl_group } }
         end,
@@ -142,17 +143,14 @@ return {
       },
       -- action to perform when picking a label.
       -- defaults to the jumping logic depending on the mode.
-      ---@type fun(match:Flash.Match, state:Flash.State)|nil
       action = nil,
       -- initial pattern to use when opening flash
       pattern = "",
       -- When `true`, flash will try to continue the last search
       continue = false,
       -- Set config to a function to dynamically change the config
-      config = nil, ---@type fun(opts:Flash.Config)|nil
       -- You can override the default options for a specific mode.
       -- Use it with `require("flash").jump({mode = "forward"})`
-      ---@type table<string, Flash.Config>
       modes = {
         -- options used when flash is activated through
         -- a regular search with `/` or `?`

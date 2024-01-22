@@ -24,5 +24,10 @@ return {
         mode = { "n", "o", "x" },
       },
     },
+    opts = {
+      skipInsignificantPunctuation = true,
+      subwordMovement = true,
+      customPatterns = {},
+    },
   },
 }
