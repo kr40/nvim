@@ -1,6 +1,6 @@
 return {
   -- luacheck: ignore
-  -- Changed the default keybinding to <C-;>, disabled other keybindings
+  -- Changed the default keybinding for s and S modes to <C-;> and <C-,>
   {
     "folke/flash.nvim",
     keys = {
@@ -25,7 +25,7 @@ return {
       { "S", mode = { "n", "x", "o" }, false },
       -- { "r", mode = "o", false },
       -- { "R", mode = { "x", "o" }, false },
-      -- { "<c-s>", mode = { "c" }, false },
+      { "<c-s>", mode = { "c" }, false },
     },
     opts = {},
   },

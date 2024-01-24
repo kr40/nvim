@@ -1,4 +1,6 @@
 -- luacheck: ignore
+-- Helper function for my Neovim Config
+
 local M = {}
 
 -- Close all open buffers before opening dashboard

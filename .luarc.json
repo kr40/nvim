@@ -1,7 +1,9 @@
 {
-    "diagnostics.disable": [
-        "duplicate-doc-field",
-        "inject-field",
-        "duplicate-doc-alias"
-    ]
+  "diagnostics.disable": [
+    "duplicate-doc-field",
+    "inject-field",
+    "duplicate-doc-alias",
+    "assign-type-mismatch"
+  ]
 }
+
