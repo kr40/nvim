@@ -1,6 +1,6 @@
 return {
   -- luacheck: ignore
-  -- Added new text objects Number, Return, Parameter, Call, Key, Value
+  -- Added new text objects Number, Return, Parameter, Function Call, Key, Value, Comment
   {
     "echasnovski/mini.ai",
     -- keys = {
@@ -21,8 +21,9 @@ return {
           c = ai.gen_spec.treesitter({ a = "@class.outer", i = "@class.inner" }, {}),
           N = ai.gen_spec.treesitter({ a = "@number.outer", i = "@number.inner" }, {}),
           R = ai.gen_spec.treesitter({ a = "@return.outer", i = "@return.inner" }, {}),
+          C = ai.gen_spec.treesitter({ a = "@comment.outer", i = "@comment.inner" }, {}),
           P = ai.gen_spec.treesitter({ a = "@parameter.outer", i = "@parameter.inner" }, {}),
-          C = ai.gen_spec.treesitter({ a = "@call.outer", i = "@call.inner" }, {}),
+          F = ai.gen_spec.treesitter({ a = "@call.outer", i = "@call.inner" }, {}),
           k = ai.gen_spec.treesitter({ a = "@assignment.inner", i = "@assignment.lhs" }, {}),
           v = ai.gen_spec.treesitter({ a = "@assignment.outer", i = "@assignment.rhs" }, {}),
           t = { "<([%p%w]-)%f[^<%w][^<>]->.-</%1>", "^<.->().*()</[^/]->$" },
@@ -60,9 +61,10 @@ return {
           N = "Number",
           R = "Return",
           P = "Parameter",
-          C = "Call",
+          F = "Function Call",
           k = "Assignment Key",
           v = "Assignment Value",
+          C = "Comment",
         }
         local a = vim.deepcopy(i)
         for k, v in pairs(a) do
