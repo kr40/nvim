@@ -5,6 +5,16 @@ return {
     dependencies = "stevearc/dressing.nvim",
     keys = {
       { "<leader>zx", "<cmd>Chmodx<CR>", mode = { "n" }, desc = "Make Current File Executable" },
+      { "<leader>fn", "<cmd>New<CR>", mode = { "n" }, desc = "New File" },
+      { "<leader>fd", "<cmd>Trash<CR>", mode = { "n" }, desc = "Delete File" },
+      { "<leader>fD", "<cmd>Duplicate<CR>", mode = { "n" }, desc = "Duplicate File" },
+      { "<leader>fN", "<cmd>NewFromSelection<CR>", mode = { "x" }, desc = "New File from Selection" },
+      { "<leader>fm", "<cmd>Move<CR>", mode = { "n" }, desc = "Move & Rename File" },
+      { "<leader>yn", "<cmd>CopyFilename<CR>", mode = { "n" }, desc = "Yank File Name" },
+      { "<leader>yp", "<cmd>CopyFilepath<CR>", mode = { "n" }, desc = "Yank Absolute File Path" },
+      { "<leader>yP", "<cmd>CopyRelativePath<CR>", mode = { "n" }, desc = "Yank Relative File Path" },
+      { "<leader>yd", "<cmd>CopyDirectoryPath<CR>", mode = { "n" }, desc = "Yank Absolute Directory Path" },
+      { "<leader>yD", "<cmd>CopyRelativeDirectoryPath<CR>", mode = { "n" }, desc = "Yank Absolute Directory Path" },
     },
     cmd = {
       "New", -- Create a new file

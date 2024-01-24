@@ -8,6 +8,7 @@ return {
         ["lua"] = { "stylua" },
         ["sh"] = { "shfmt" },
         ["bash"] = { "shfmt" },
+        ["astro"] = { "prettier" },
       },
       formatters = {
         injected = { options = { ignore_errors = true } },

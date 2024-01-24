@@ -27,8 +27,3 @@ k.nmap({ "<leader>zd", [["_d]], opts({ desc = "Delete Into The Void Register" })
 
 -- Correct the last typo in insert mode
 k.imap({ "<C-l>", "<c-g>u<Esc>[s1z=`]a<c-g>u", opts({ desc = "Correct Last Typo" }) })
-
------------------------------------------------ Deleted Mappings ------------------------------------------------------
-
-k.dnvmap({ "<A-j>" }) -- Adding mini.move
-k.dnvmap({ "<A-k>" }) -- Adding mini.move

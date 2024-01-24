@@ -23,11 +23,8 @@ return {
         ["<C-f>"] = cmp.mapping.scroll_docs(4), -- f to scroll the documentation down
         ["<C-Space>"] = cmp.mapping.complete(),
         ["<C-e>"] = cmp.mapping.abort(),
-        ["<C-CR>"] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
-        ["<S-CR>"] = cmp.mapping.confirm({
-          behavior = cmp.ConfirmBehavior.Replace,
-          select = true,
-        }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
+        ["<C-CR>"] = cmp.mapping.confirm({ behavior = cmp.ConfirmBehavior.Replace, select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
+        ["<S-CR>"] = cmp.mapping.confirm({ behavior = cmp.ConfirmBehavior.Insert, select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
         ["<CR>"] = function(fallback) -- Changed C-CR to CR
           cmp.abort()
           fallback()
@@ -52,30 +49,9 @@ return {
                 handler = handlers["*"],
               },
             },
-            lua = {
-              ["("] = {
-                kind = {
-                  cmp.lsp.CompletionItemKind.Function,
-                  cmp.lsp.CompletionItemKind.Method,
-                },
-                ---@param char string
-                ---@param item table item completion
-                ---@param bufnr number buffer number
-                ---@param rules table
-                ---@param commit_character table<string>
-                handler = function(char, item, bufnr, rules, commit_character)
-                  -- Your handler function. Inpect with print(vim.inspect{char, item, bufnr, rules, commit_character})
-                end,
-              },
-            },
-            -- Disable for tex
-            tex = false,
-            -- Disable for python
-            python = false,
           },
         })
       )
-      cmp.event:on("confirm_done", cmp_autopairs.on_confirm_done())
 
       -- UI Customization
       cmp.setup({

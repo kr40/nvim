@@ -11,6 +11,7 @@ return {
       "html",
       "svelte",
       "lua",
+      "astro",
     },
     opts = {
       filetypes = {
@@ -22,6 +23,7 @@ return {
         "html",
         "svelte",
         "lua",
+        "astro",
       },
       user_default_options = {
         css = true,

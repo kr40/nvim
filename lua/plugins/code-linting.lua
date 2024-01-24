@@ -11,6 +11,7 @@ return {
       linters_by_ft = {
         fish = { "fish" },
         lua = { "luacheck" },
+        astro = { "eslint" },
         -- Use the "*" filetype to run linters on all filetypes.
         -- ['*'] = { 'global linter' },
         -- Use the "_" filetype to run linters on filetypes that don't have other linters configured.
