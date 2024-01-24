@@ -4,8 +4,8 @@ return {
     "xiyaowong/link-visitor.nvim",
     cmd = { "VisitLinkInBuffer", "VisitLinkUnderCursor", "VisitLinkNearCursor", "VisitLinkNearest" },
     keys = {
-      { "<leader>zl", "<cmd>VisitLinkUnderCursor<cr>", mode = "n", desc = "Visit link under Cursor" },
-      { "<leader>zL", "<cmd>VisitLinkInBuffer<cr>", mode = "n", desc = "Visit links in Buffer" },
+      { "<leader>fl", "<cmd>VisitLinkUnderCursor<cr>", mode = "n", desc = "Link Under Cursor" },
+      { "<leader>fL", "<cmd>VisitLinkInBuffer<cr>", mode = "n", desc = "Links in Buffer" },
     },
     opts = {
       open_cmd = nil,

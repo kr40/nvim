@@ -8,12 +8,12 @@ return {
     ft = "norg",
     keys = {
       {
-        "<leader>zn",
+        "<leader>no",
         "<cmd>Neorg workspace notes<CR>",
         mode = "n",
         noremap = true,
         silent = true,
-        desc = "Go to Neorg Notes Workspace",
+        desc = "Open Notes Workspace",
       },
     },
     cmd = "Neorg",

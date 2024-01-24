@@ -4,7 +4,7 @@ return {
     "chrisgrieser/nvim-genghis",
     dependencies = "stevearc/dressing.nvim",
     keys = {
-      { "<leader>zx", "<cmd>Chmodx<CR>", mode = { "n" }, desc = "Make Current File Executable" },
+      { "<leader>fx", "<cmd>Chmodx<CR>", mode = { "n" }, desc = "Make File Executable" },
       { "<leader>fn", "<cmd>New<CR>", mode = { "n" }, desc = "New File" },
       { "<leader>fd", "<cmd>Trash<CR>", mode = { "n" }, desc = "Delete File" },
       { "<leader>fD", "<cmd>Duplicate<CR>", mode = { "n" }, desc = "Duplicate File" },

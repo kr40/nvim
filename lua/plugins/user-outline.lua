@@ -1,11 +1,11 @@
 return {
-  -- Symbols Outline plugin for Neovim (Uses SPC zo)
+  -- Symbols Outline plugin for Neovim (Uses SPC cs)
   {
     "hedyhli/outline.nvim",
     cmd = "Outline",
     keys = {
       {
-        "<leader>zo",
+        "<leader>cS",
         "<cmd>Outline<CR>",
         mode = "n",
         noremap = true,

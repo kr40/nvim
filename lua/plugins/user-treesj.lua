@@ -1,11 +1,11 @@
 return {
-  -- TreeSitterJoin plugin (uses SPC zm)
+  -- TreeSitterJoin plugin (uses SPC cj)
   {
     "Wansmer/treesj",
     cmd = "TSJToggle",
     keys = {
       {
-        "<leader>zm",
+        "<leader>cj",
         "<cmd>TSJToggle<CR>",
         mode = "n",
         noremap = true,

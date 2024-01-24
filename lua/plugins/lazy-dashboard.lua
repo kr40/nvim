@@ -7,7 +7,7 @@ return {
       {
         "<leader>;",
         function()
-          local dashboard = require("config.utils").openDashboard
+          local dashboard = require("config.user.utils").openDashboard
           dashboard()
         end,
         mode = "n",

@@ -1,6 +1,6 @@
 return {
   -- luacheck: ignore
-  -- Snippet management plugin for Neovim (Uses SPC zs and SPC ze)
+  -- Snippet management plugin for Neovim (Uses SPC cs and SPC ce)
   {
     "chrisgrieser/nvim-scissors",
     -- dependencies = "nvim-telescope/telescope.nvim",
@@ -33,7 +33,7 @@ return {
     },
     keys = {
       {
-        "<leader>zs",
+        "<leader>cs",
         function()
           require("scissors").addNewSnippet()
         end,
@@ -41,7 +41,7 @@ return {
         desc = "Add New Snippet",
       },
       {
-        "<leader>ze",
+        "<leader>ce",
         function()
           require("scissors").editSnippet()
         end,

@@ -1,5 +1,5 @@
 return {
-  -- Clipboard Manager extension for Telescope (Uses SPC zC)
+  -- Clipboard Manager extension for Telescope (Uses SPC sy)
   {
     "AckslD/nvim-neoclip.lua",
     lazy = true,
@@ -8,11 +8,18 @@ return {
     },
     keys = {
       {
-        "<leader>zC",
+        "<leader>sy",
         function()
           require("telescope").extensions.neoclip.neoclip()
         end,
-        desc = "Clipboard History",
+        desc = "Yank History",
+      },
+      {
+        "<leader>yh",
+        function()
+          require("telescope").extensions.neoclip.neoclip()
+        end,
+        desc = "Yank History",
       },
     },
     opts = {

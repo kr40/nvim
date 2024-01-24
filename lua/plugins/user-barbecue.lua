@@ -1,17 +1,18 @@
 return {
-  -- VSCode style winbar (Uses SPC zb)
+  -- luacheck: ignore
+  -- VSCode style winbar (Uses SPC uB)
   {
     "utilyre/barbecue.nvim",
     event = "VeryLazy",
     name = "barbecue",
     keys = {
       {
-        "<leader>zb",
+        "<leader>uB",
         "<cmd>Barbecue toggle<CR>",
         mode = "n",
         noremap = true,
         silent = true,
-        desc = "Toggle Undotree",
+        desc = "Toggle Barbecue",
       },
     },
     version = "*",

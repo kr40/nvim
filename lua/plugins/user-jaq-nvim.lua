@@ -1,11 +1,11 @@
 return {
-  -- Code runner plugin for neovim (Uses SPC zc )
+  -- Code runner plugin for neovim (Uses SPC cc )
   {
     "is0n/jaq-nvim",
     cmd = "Jaq",
     keys = {
       {
-        "<leader>zc",
+        "<leader>cc",
         "<cmd>Jaq<CR>",
         mode = "n",
         noremap = true,
