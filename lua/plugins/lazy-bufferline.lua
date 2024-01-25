@@ -1,11 +1,13 @@
 return {
   -- luacheck: ignore
-  -- Repaced mini.bufremove with bufdelete, Added Harpoon functionality to show index and sort
+  -- Replaced mini.bufremove with bufdelete, Added Harpoon functionality to show index and sort
   {
     "akinsho/bufferline.nvim",
     keys = {
-      { "<leader>bc", "<Cmd>BufferLinePick<CR>", desc = "Pick Buffer" },
-      { "<leader>bC", "<Cmd>BufferLinePickClose<CR>", desc = "Pick Buffer Close" },
+      { "<leader>bc", "<Cmd>BufferLinePick<CR>", desc = "Choose Buffer" },
+      { "<leader>bC", "<Cmd>BufferLinePickClose<CR>", desc = "Choose Buffer to Close" },
+      { "<leader>b.", "<Cmd>BufferLineMoveNext<CR>", desc = "Move Buffer Right" },
+      { "<leader>b,", "<Cmd>BufferLineMovePrev<CR>", desc = "Move Buffer Left" },
     },
     opts = {
       options = {

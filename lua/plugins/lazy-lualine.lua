@@ -1,6 +1,6 @@
 return {
   -- luacheck: ignore
-  -- Added LSP, Linting and Formatting clients and shiftwidth to lualine (LunarVim style)
+  -- Added LSP, Linting and Formatting clients and shiftwidth to lualine (LunarVim style), added Harpoon icon
   {
     "nvim-lualine/lualine.nvim",
     opts = function(_, opts)
