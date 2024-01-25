@@ -1,4 +1,5 @@
 return {
+  -- luacheck: ignore
   -- Clipboard Manager extension for Telescope (Uses SPC sy)
   {
     "AckslD/nvim-neoclip.lua",

@@ -1,4 +1,5 @@
 return {
+  --luacheck: ignore
   -- Add Neorg support source to nvim-cmp
   {
     "hrsh7th/nvim-cmp",

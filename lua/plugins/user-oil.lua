@@ -1,4 +1,5 @@
 return {
+  -- luacheck: ignore
   -- Edit your file system like a buffer (Uses -)
   {
     "stevearc/oil.nvim",

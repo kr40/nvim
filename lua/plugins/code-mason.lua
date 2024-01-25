@@ -14,6 +14,7 @@ return {
         "luacheck",
         "html-lsp",
         "css-lsp",
+        "astro-language-server",
       })
     end,
   },

@@ -15,6 +15,13 @@ return {
         silent = true,
         desc = "Open Notes Workspace",
       },
+      {
+        "<leader>nf",
+        function()
+          require("telescope.builtin").find_files({ cwd = "~/notes/" })
+        end,
+        desc = "Find Notes",
+      },
     },
     cmd = "Neorg",
     opts = {

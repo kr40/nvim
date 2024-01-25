@@ -7,6 +7,7 @@ return {
     opts = {
       useDefaultKeymaps = true,
       disabledKeymaps = {
+        "gc",
         "in",
         "an",
         "il",

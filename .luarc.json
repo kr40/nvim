@@ -3,7 +3,10 @@
     "duplicate-doc-field",
     "inject-field",
     "duplicate-doc-alias",
-    "assign-type-mismatch"
+    "assign-type-mismatch",
+    "undefined-doc-name",
+        "different-requires",
+        "unused-local",
+        "param-type-mismatch"
   ]
 }
-

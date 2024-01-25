@@ -1,4 +1,5 @@
 return {
+  -- luacheck: ignore
   -- Add nvim-lua support source to nvim-cmp
   {
     "hrsh7th/nvim-cmp",

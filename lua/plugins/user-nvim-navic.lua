@@ -1,4 +1,5 @@
 return {
+  -- luacheck: ignore
   -- LSP code context provider
   {
     "SmiteshP/nvim-navic",

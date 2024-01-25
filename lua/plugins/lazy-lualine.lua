@@ -67,6 +67,23 @@ return {
       table.insert(opts.sections.lualine_x, 4, function()
         return "⇥ " .. vim.bo.shiftwidth
       end)
+
+      local function harpoonIcon()
+        local harpoon = require("harpoon")
+        local current_file_path = vim.fn.fnamemodify(vim.fn.expand("%:p"), ":.")
+        local marks = harpoon:list()
+
+        for index = 1, marks:length() do
+          if current_file_path == marks:get(index).value then
+            return "󰀱"
+          end
+        end
+
+        return ""
+      end
+      table.insert(opts.sections.lualine_c, 5, function()
+        return harpoonIcon()
+      end)
     end,
   },
 }
