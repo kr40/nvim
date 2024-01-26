@@ -10,6 +10,9 @@ M.openDashboard = function()
   local cancel_operation = false
   local cancel_bufnr = nil
 
+  -- Close special filetypes
+  M.specialFtClose()
+
   -- Close all other windows except the current one
   local current_win = vim.api.nvim_get_current_win()
   for _, win in ipairs(vim.api.nvim_list_wins()) do
@@ -55,6 +58,38 @@ M.openDashboard = function()
       bufdelete(0, true)
     end
     vim.cmd.Dashboard()
+  end
+end
+
+-- Close special filetypes
+M.specialFtClose = function()
+  local special_filetypes = {
+    "oil",
+    "neo-tree",
+    "PlenaryTestPopup",
+    "help",
+    "lspinfo",
+    "man",
+    "notify",
+    "qf",
+    "query",
+    "spectre_panel",
+    "startuptime",
+    "tsplayground",
+    "neotest-output",
+    "checkhealth",
+    "neotest-summary",
+    "neotest-output-panel",
+  }
+
+  local current_buf = vim.api.nvim_get_current_buf()
+  local current_buf_type = vim.api.nvim_buf_get_option(current_buf, "filetype")
+
+  for _, filetype in ipairs(special_filetypes) do
+    if current_buf_type == filetype then
+      vim.cmd.q()
+      break
+    end
   end
 end
 
