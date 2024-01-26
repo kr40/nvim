@@ -1,11 +1,13 @@
 return {
   -- luacheck: ignore
-  -- Setup telescope to ignore certain files, added Telescope extensions (Undo)
+  -- Setup telescope to ignore certain files, added Telescope extensions (Undo, Import, Symbols)
   {
     "nvim-telescope/telescope.nvim",
     dependencies = {
       "nvim-lua/plenary.nvim",
       "debugloop/telescope-undo.nvim",
+      "piersolenski/telescope-import.nvim",
+      "nvim-telescope/telescope-symbols.nvim",
     },
     keys = {
       {
@@ -14,6 +16,13 @@ return {
           require("telescope.builtin").find_files({ cwd = require("lazy.core.config").options.root })
         end,
         desc = "Find Plugin File",
+      },
+      {
+        "<leader>fs",
+        function()
+          require("telescope.builtin").symbols()
+        end,
+        desc = "Find Symbols",
       },
       {
         "<leader>fB",
@@ -28,6 +37,13 @@ return {
           require("telescope").extensions.undo.undo()
         end,
         desc = "Undo History",
+      },
+      {
+        "<leader>si",
+        function()
+          require("telescope").extensions.import.import()
+        end,
+        desc = "Imports",
       },
     },
     opts = function()
@@ -54,6 +70,7 @@ return {
       -- Load Telescope Extensions
       require("telescope").load_extension("undo")
       require("telescope").load_extension("neoclip")
+      require("telescope").load_extension("import")
 
       return {
         defaults = {
@@ -101,6 +118,16 @@ return {
                   ["y"] = require("telescope-undo.actions").yank_additions,
                   ["Y"] = require("telescope-undo.actions").yank_deletions,
                   ["u"] = require("telescope-undo.actions").restore,
+                },
+              },
+            },
+            import = {
+              insert_at_top = true,
+              custom_languages = {
+                {
+                  regex = [[^(?:import(?:[\"'\s]*([\w*{}\n, ]+)from\s*)?[\"'\s](.*?)[\"'\s].*)]],
+                  filetypes = { "typescript", "typescriptreact", "javascript", "react" },
+                  extensions = { "js", "ts", "jsx" },
                 },
               },
             },

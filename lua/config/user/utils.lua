@@ -1,5 +1,5 @@
 -- luacheck: ignore
--- Helper function for my Neovim Config
+-- Helper functions for my Neovim Config
 
 local M = {}
 
