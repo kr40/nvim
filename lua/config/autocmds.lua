@@ -29,6 +29,20 @@ vim.api.nvim_create_autocmd("User", {
     local name = vim.api.nvim_buf_get_name(bufnr)
 
     if name == "" then
+      local current_win = vim.api.nvim_get_current_win()
+      for _, win in ipairs(vim.api.nvim_list_wins()) do
+        if win ~= current_win then
+          vim.api.nvim_win_close(win, false)
+        end
+      end
+
+      local current_tab = vim.api.nvim_get_current_tabpage()
+      for _, tab in ipairs(vim.api.nvim_list_tabpages()) do
+        if tab ~= current_tab then
+          vim.api.nvim_tabpage_close(tab, false)
+        end
+      end
+
       vim.cmd.Dashboard()
     end
   end,

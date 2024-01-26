@@ -27,7 +27,6 @@ return {
       local finders = require("telescope.finders")
       local actions = require("telescope.actions")
       local action_state = require("telescope.actions.state")
-      harpoon:setup({})
 
       local function generate_new_finder(harpoon_files)
         local files = {}
@@ -144,13 +143,14 @@ return {
           )
           :find()
       end
+
       -- Telescope Harpoon List
       k.nmap({
         "<leader>at",
         function()
           toggle_telescope(harpoon:list())
         end,
-        opts({ desc = "Telescope Harpoon List" }),
+        opts({ desc = "List Harpoon Files (Telescope)" }),
       })
 
       -- Append to Harpoon List
@@ -173,7 +173,7 @@ return {
 
       -- Go to Previous Harpoon File
       k.nmap({
-        "<leader>a[",
+        "[a",
         function()
           harpoon:list():prev({ ui_nav_wrap = true })
         end,
@@ -182,7 +182,7 @@ return {
 
       -- Go to Next Harpoon File
       k.nmap({
-        "<leader>a]",
+        "]a",
         function()
           harpoon:list():next({ ui_nav_wrap = true })
         end,
