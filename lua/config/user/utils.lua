@@ -80,6 +80,7 @@ M.specialFtClose = function()
     "checkhealth",
     "neotest-summary",
     "neotest-output-panel",
+    "Outline",
   }
 
   local current_buf = vim.api.nvim_get_current_buf()

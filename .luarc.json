@@ -5,8 +5,8 @@
     "duplicate-doc-alias",
     "assign-type-mismatch",
     "undefined-doc-name",
-        "different-requires",
-        "unused-local",
-        "param-type-mismatch"
+    "different-requires",
+    "unused-local",
+    "param-type-mismatch"
   ]
 }

@@ -14,7 +14,7 @@ local rename = [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]]
 k.nmap({ "J", "mzJ`z" })
 
 -- Paste without losing the current register in Visual modes
-k.xmap({ "p", [["_dP]] })
+k.vmap({ "p", [["_dP]] })
 
 -- Rename under the cursor
 k.nmap({ "<leader>zr", rename, opts({ desc = "Rename Under the Cursor" }) })

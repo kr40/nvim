@@ -26,6 +26,7 @@ return {
         ["<leader>z"] = { name = "+user" },
         ["<leader>y"] = { name = "+yank" },
         ["<leader>n"] = { name = "+neorg" },
+        ["<leader>p"] = { name = "+project" },
       },
     },
   },

@@ -17,10 +17,11 @@ return {
         end,
         desc = "Find Plugin File",
       },
+      { "<leader>fg", "<cmd>Telescope git_files<cr>", desc = "Find Files (git-files)" },
       {
         "<leader>fs",
         function()
-          require("telescope.builtin").symbols()
+          require("telescope.builtin").symbols({ sources = { "nerd", "kaomoji", "gitmoji", "emoji" } })
         end,
         desc = "Find Symbols",
       },
@@ -45,10 +46,20 @@ return {
         end,
         desc = "Imports",
       },
+      -- Disabled and set below to use cwd instead
+      {
+        "<leader><space>",
+        false,
+      },
     },
     opts = function()
       local actions = require("telescope.actions")
       local Util = require("lazyvim.util")
+      local opts = require("config.user.customkey").opts
+      local k = require("config.user.customkey")
+
+      -- Change SPC SPC to open files in current working directory instead
+      k.nmap({ "<leader><space>", Util.telescope("files", { cwd = false }), opts({ desc = "Find Files (cwd)" }) })
 
       local open_with_trouble = function(...)
         return require("trouble.providers.telescope").open_with_trouble(...)
