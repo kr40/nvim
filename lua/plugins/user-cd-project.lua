@@ -10,6 +10,8 @@ return {
     },
     opts = {
       project_dir_pattern = { ".git", ".gitignore", "Cargo.toml", "package.json", "go.mod" },
+      choice_format = "both",
+      projects_picker = "vim-ui",
       hooks = {
         {
           callback = function(dir)

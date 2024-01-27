@@ -13,8 +13,26 @@ local rename = [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]]
 -- Use J without moving the cursor
 k.nmap({ "J", "mzJ`z" })
 
--- Paste without losing the current register in Visual modes
+-- `p` without losing the register in Visual modes
 k.vmap({ "p", [["_dP]] })
+
+-- Avoid `x` filling the register
+k.nmap({ "x", '"_x' })
+
+-- Avoid `c` filling the register
+k.nmap({ "c", '"_c' })
+
+-- Avoid `dd` filling the register when its only whitespace
+k.nmap({
+  "dd",
+  function()
+    if vim.fn.getline(".") == "" then
+      return '"_dd'
+    end
+    return "dd"
+  end,
+  opts({ expr = true }),
+})
 
 -- Rename under the cursor
 k.nmap({ "<leader>zr", rename, opts({ desc = "Rename Under the Cursor" }) })
