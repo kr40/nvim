@@ -1,18 +1,25 @@
 # 💤 My Neovim Config based on LazyVim
 
-- Added and Edited some plugins
-  - check lua/plugins
-- Disabled some plugins
-  - check lua/plugins/disabled.lua
-- Added some options, keymaps and autocmds
+<a href="https://dotfyle.com/kr40/nvim"><img src="https://dotfyle.com/kr40/nvim/badges/plugins?style=for-the-badge" /></a>
+<a href="https://dotfyle.com/kr40/nvim"><img src="https://dotfyle.com/kr40/nvim/badges/leaderkey?style=for-the-badge" /></a>
+<a href="https://dotfyle.com/kr40/nvim"><img src="https://dotfyle.com/kr40/nvim/badges/plugin-manager?style=for-the-badge" /></a>
 
-  - check lua/config/options.lua
-  - check lua/config/keymaps.lua
-  - check lua/config/autocmds.lua
+## Install Instructions
 
-- Documented, Easy to understand and Configure on your own
+Clone the repository and install the plugins:
 
-## List of installed plugins
+```sh
+git clone git@github.com:kr40/nvim ~/.config/kr40/nvim
+NVIM_APPNAME=kr40/nvim/ nvim --headless +"Lazy! sync" +qa
+```
+
+Open Neovim with this config:
+
+```sh
+NVIM_APPNAME=kr40/nvim/ nvim
+```
+
+## List of Installed Plugins
 
 - [AckslD/nvim-neoclip.lua](https://github.com/AckslD/nvim-neoclip.lua)
 - [HiPhish/rainbow-delimiters.nvim](https://github.com/HiPhish/rainbow-delimiters.nvim)
