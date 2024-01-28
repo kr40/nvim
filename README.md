@@ -1,3 +1,5 @@
+<!-- markdownlint-disable MD045 MD033 MD013 -->
+
 # 💤 My Neovim Config based on LazyVim
 
 <a href="https://dotfyle.com/kr40/nvim"><img src="https://dotfyle.com/kr40/nvim/badges/plugins?style=for-the-badge" /></a>
@@ -20,6 +22,8 @@ NVIM_APPNAME=kr40/nvim/ nvim
 ```
 
 ## List of Installed Plugins
+
+<!-- This list was generated using "lua for _, v in pairs(require("lazy").plugins()) do print(v[1]) end" -->
 
 - [AckslD/nvim-neoclip.lua](https://github.com/AckslD/nvim-neoclip.lua)
 - [HiPhish/rainbow-delimiters.nvim](https://github.com/HiPhish/rainbow-delimiters.nvim)
