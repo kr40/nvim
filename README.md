@@ -89,6 +89,7 @@ NVIM_APPNAME=kr40/nvim/ nvim
 - [nvim-pack/nvim-spectre](https://github.com/nvim-pack/nvim-spectre)
 - [nvim-telescope/telescope-fzf-native.nvim](https://github.com/nvim-telescope/telescope-fzf-native.nvim)
 - [nvim-telescope/telescope-symbols.nvim](https://github.com/nvim-telescope/telescope-symbols.nvim)
+- [nvim-telescope/telescope-ui-select.nvim](https://github.com/nvim-telescope/telescope-ui-select.nvim)
 - [nvim-telescope/telescope.nvim](https://github.com/nvim-telescope/telescope.nvim)
 - [nvim-tree/nvim-web-devicons](https://github.com/nvim-tree/nvim-web-devicons)
 - [nvim-treesitter/nvim-treesitter-context](https://github.com/nvim-treesitter/nvim-treesitter-context)

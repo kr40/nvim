@@ -8,6 +8,7 @@ return {
       "debugloop/telescope-undo.nvim",
       "piersolenski/telescope-import.nvim",
       "nvim-telescope/telescope-symbols.nvim",
+      "nvim-telescope/telescope-ui-select.nvim",
     },
     keys = {
       {
@@ -82,6 +83,7 @@ return {
       require("telescope").load_extension("undo")
       require("telescope").load_extension("neoclip")
       require("telescope").load_extension("import")
+      require("telescope").load_extension("ui-select")
 
       return {
         defaults = {
@@ -141,6 +143,9 @@ return {
                   extensions = { "js", "ts", "jsx" },
                 },
               },
+            },
+            ["ui-select"] = {
+              require("telescope.themes").get_dropdown({}),
             },
           },
 

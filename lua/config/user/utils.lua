@@ -81,6 +81,7 @@ M.specialFtClose = function()
     "neotest-summary",
     "neotest-output-panel",
     "Outline",
+    "netrw",
   }
 
   local current_buf = vim.api.nvim_get_current_buf()
