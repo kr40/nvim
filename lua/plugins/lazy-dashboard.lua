@@ -42,7 +42,7 @@ return {
         -- stylua: ignore
         center = {
           { action = "Telescope find_files",                                     desc = " Find file",       icon = " ", key = "f" },
-          { action = "ene | startinsert",                                        desc = " New file",        icon = " ", key = "n" },
+          { action = "New",                                        desc = " New file",        icon = " ", key = "n" },
           { action = "Telescope oldfiles",                                       desc = " Recent files",    icon = " ", key = "r" },
           { action = "CdProject",                                                desc = " Open Projects",   icon = " ", key = "p" },
           { action = "Neorg workspace notes",                                    desc = " Open Notes",      icon = " ", key = "o" },

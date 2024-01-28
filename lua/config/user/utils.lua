@@ -64,24 +64,24 @@ end
 -- Close special filetypes
 M.specialFtClose = function()
   local special_filetypes = {
-    "oil",
-    "neo-tree",
+    "Outline",
     "PlenaryTestPopup",
+    "checkhealth",
     "help",
     "lspinfo",
     "man",
+    "neo-tree",
+    "neotest-output",
+    "neotest-output-panel",
+    "neotest-summary",
+    "netrw",
     "notify",
+    "oil",
     "qf",
     "query",
     "spectre_panel",
     "startuptime",
     "tsplayground",
-    "neotest-output",
-    "checkhealth",
-    "neotest-summary",
-    "neotest-output-panel",
-    "Outline",
-    "netrw",
   }
 
   local current_buf = vim.api.nvim_get_current_buf()

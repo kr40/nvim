@@ -17,6 +17,22 @@ return {
         html = {},
         cssls = {},
         astro = {},
+        emmet_language_server = {
+          filetypes = {
+            "astro",
+            "css",
+            "eruby",
+            "html",
+            "javascript",
+            "javascriptreact",
+            "less",
+            "pug",
+            "sass",
+            "scss",
+            "svelte",
+            "typescriptreact",
+          },
+        },
         lua_ls = {
           -- mason = false, -- set to false if you don't want this server to be installed with mason
           -- Use this to add any additional keymaps

@@ -12,7 +12,7 @@ return {
         local clients = vim.lsp.get_active_clients({ bufnr = 0 })
         local client_names = {}
         for _, client in pairs(clients) do
-          if client.name ~= "copilot" then
+          if client.name ~= "copilot" and client.name ~= "emmet_language_server" then -- Emmet is not an LSP only used as tool
             client_names[client.name] = true
           end
         end

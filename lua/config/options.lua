@@ -37,3 +37,5 @@ opt.incsearch = true
 
 -- Enable Spellcheck
 opt.spell = true
+
+-- Motions like "G" also move to the first char
