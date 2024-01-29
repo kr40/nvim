@@ -98,7 +98,6 @@ return {
             "auto%-cpufreq/.*",
             "%.deb",
             "luarocks%-*",
-            "lazygit",
             "Library/.*",
             "Music/.*",
             "Downloads/.*",
