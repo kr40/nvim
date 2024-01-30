@@ -19,9 +19,6 @@ k.vmap({ "p", [["_dP]] })
 -- Avoid `x` filling the register
 k.nmap({ "x", '"_x' })
 
--- Avoid `c` filling the register
-k.nmap({ "c", '"_c' })
-
 -- Avoid `dd` filling the register when its only whitespace
 k.nmap({
   "dd",

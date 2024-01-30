@@ -79,7 +79,6 @@ NVIM_APPNAME=kr40/nvim/ nvim
 - [linux-cultist/venv-selector.nvim](https://github.com/linux-cultist/venv-selector.nvim)
 - [lukas-reineke/headlines.nvim](https://github.com/lukas-reineke/headlines.nvim)
 - [lukas-reineke/indent-blankline.nvim](https://github.com/lukas-reineke/indent-blankline.nvim)
-- [mattn/emmet-vim](https://github.com/mattn/emmet-vim)
 - [mawkler/modicator.nvim](https://github.com/mawkler/modicator.nvim)
 - [mfussenegger/nvim-lint](https://github.com/mfussenegger/nvim-lint)
 - [mg979/vim-visual-multi](https://github.com/mg979/vim-visual-multi)
