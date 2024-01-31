@@ -31,6 +31,12 @@ k.nmap({
   opts({ expr = true }),
 })
 
+-- Play macro at @q down a line
+k.nmap({ "Q", "@qj" })
+
+-- Play current macro for selection
+k.xmap({ "Q", ":norm @q<cr>" })
+
 -- Rename under the cursor
 k.nmap({ "<leader>zr", rename, opts({ desc = "Rename Under the Cursor" }) })
 

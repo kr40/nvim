@@ -40,3 +40,5 @@ opt.spell = true
 
 -- Motions like "G" also move to the first char
 opt.startofline = true
+
+opt.clipboard = "unnamedplus"
