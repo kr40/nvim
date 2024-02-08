@@ -1,1 +1,9 @@
-{"macros": [{"name": "CreateOrderedList", "raw": "azB2gGtyeYBrZFAwgPwEQWpAcQ==", "content": "k0v<Right>y<Down>P0<C-A>j@q"}]}
+{
+  "macros": [
+    {
+      "name": "test1",
+      "raw": "SS0gWyBdIBtq",
+      "content": "I-<Space>[<Space>]<Space><Esc>j"
+    }
+  ]
+}

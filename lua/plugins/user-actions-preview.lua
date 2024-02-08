@@ -18,6 +18,13 @@ return {
       diff = {
         ctxlen = 3,
       },
+
+      -- highlight_command = {
+      --   require("actions-preview.highlight").delta("delta --no-gitconfig --side-by-side"),
+      --   -- require("actions-preview.highlight").diff_so_fancy(),
+      --   -- require("actions-preview.highlight").diff_highlight(),
+      -- },
+
       -- priority list of preferred backend
       backend = { "telescope", "nui" },
 

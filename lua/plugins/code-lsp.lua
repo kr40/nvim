@@ -16,6 +16,16 @@ return {
         bashls = {},
         html = {},
         cssls = {},
+        stylelint_lsp = {
+          cmd = { "stylelint-lsp", "--stdio" },
+          filetypes = { "css", "scss" },
+          settings = {
+            stylelintplus = {
+              autoFixOnFormat = true,
+              autoFixOnSave = true,
+            },
+          },
+        },
         astro = {},
         emmet_language_server = {
           filetypes = {

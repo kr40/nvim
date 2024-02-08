@@ -16,6 +16,7 @@ return {
         "css-lsp",
         "astro-language-server",
         "emmet-language-server",
+        "stylelint-lsp",
       })
     end,
   },
