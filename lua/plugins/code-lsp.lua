@@ -16,6 +16,11 @@ return {
         bashls = {},
         html = {},
         cssls = {},
+        astro = {},
+        svelte = {
+          cmd = { "svelteserver", "--stdio" },
+          filetypes = { "svelte" },
+        },
         stylelint_lsp = {
           cmd = { "stylelint-lsp", "--stdio" },
           filetypes = { "css", "scss" },
@@ -26,20 +31,17 @@ return {
             },
           },
         },
-        astro = {},
         emmet_language_server = {
           filetypes = {
             "astro",
             "css",
             "eruby",
             "html",
-            "javascript",
             "javascriptreact",
             "less",
             "pug",
             "sass",
             "scss",
-            "svelte",
             "typescriptreact",
           },
         },

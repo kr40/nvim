@@ -17,6 +17,7 @@ return {
         "astro-language-server",
         "emmet-language-server",
         "stylelint-lsp",
+        "svelte-language-server",
       })
     end,
   },
