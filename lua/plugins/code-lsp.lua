@@ -22,7 +22,6 @@ return {
           filetypes = { "svelte" },
         },
         stylelint_lsp = {
-          cmd = { "stylelint-lsp", "--stdio" },
           filetypes = { "css", "scss" },
           settings = {
             stylelintplus = {
