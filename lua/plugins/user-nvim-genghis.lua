@@ -14,6 +14,7 @@ return {
       { "<leader>fM", "<cmd>MoveToFolderInCwd<CR>", mode = { "n" }, desc = "Move to folder (cwd)" },
       { "<leader>yn", "<cmd>CopyFilename<CR>", mode = { "n" }, desc = "Yank File Name" },
       { "<leader>yp", "<cmd>CopyFilepath<CR>", mode = { "n" }, desc = "Yank Absolute File Path" },
+      { "<leader>y`", "<cmd>CopyFilepathWithTilde<CR>", mode = { "n" }, desc = "Yank Absolute File Path (~/)" },
       { "<leader>yP", "<cmd>CopyRelativePath<CR>", mode = { "n" }, desc = "Yank Relative File Path" },
       { "<leader>yd", "<cmd>CopyDirectoryPath<CR>", mode = { "n" }, desc = "Yank Absolute Directory Path" },
       { "<leader>yD", "<cmd>CopyRelativeDirectoryPath<CR>", mode = { "n" }, desc = "Yank Absolute Directory Path" },
@@ -28,6 +29,7 @@ return {
       "Trash", -- Delete the current file
       "CopyFilename", -- Copy the current filename
       "CopyFilepath", -- Copy the current filepath (absolute)
+      "CopyFilepathWithTilde", -- Copy the current filepath (absoulute, with ~)
       "CopyRelativePath", -- Copy the current filepath (relative)
       "CopyDirectoryPath", -- Copy the current directory path (absolute)
       "CopyRelativeDirectoryPath", -- Copy the current directory path (relative)

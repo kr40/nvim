@@ -5,8 +5,6 @@ return {
     opts = {
       formatters_by_ft = {
         ["python"] = { "black" },
-        ["lua"] = { "stylua" },
-        ["sh"] = { "shfmt" },
         ["bash"] = { "shfmt" },
         ["astro"] = { "prettier" },
       },
