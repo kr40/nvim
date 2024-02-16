@@ -1,4 +1,5 @@
 return {
+  -- Tooling for Go
   {
     "olexsmir/gopher.nvim",
     dependencies = {
