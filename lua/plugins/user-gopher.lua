@@ -7,14 +7,6 @@ return {
       "nvim-treesitter/nvim-treesitter",
     },
     ft = { "go", "gomod", "gowork", "gotmpl" },
-    opts = {
-      commands = {
-        go = "go",
-        gomodifytags = "gomodifytags",
-        gotests = "~/go/bin/gotests",
-        impl = "impl",
-        iferr = "iferr",
-      },
-    },
+    opts = {},
   },
 }
