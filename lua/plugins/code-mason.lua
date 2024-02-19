@@ -16,6 +16,7 @@ return {
         "emmet-language-server",
         "stylelint-lsp",
         "svelte-language-server",
+        "golangci-lint",
       })
     end,
   },
