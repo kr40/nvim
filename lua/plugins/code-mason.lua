@@ -17,6 +17,8 @@ return {
         "stylelint-lsp",
         "svelte-language-server",
         "golangci-lint",
+        "htmx-lsp",
+        "templ",
       })
     end,
   },

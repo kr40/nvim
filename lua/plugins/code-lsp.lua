@@ -17,6 +17,15 @@ return {
         html = {},
         cssls = {},
         astro = {},
+        htmx = {},
+        templ = {
+          default_config = {
+            cmd = { "templ", "lsp" },
+            filetypes = { "templ" },
+            root_dir = require("lspconfig.util").root_pattern("go.mod", ".git"),
+            settings = {},
+          },
+        },
         svelte = {
           cmd = { "svelteserver", "--stdio" },
           filetypes = { "svelte" },
@@ -42,6 +51,7 @@ return {
             "sass",
             "scss",
             "typescriptreact",
+            "templ",
           },
         },
         lua_ls = {
