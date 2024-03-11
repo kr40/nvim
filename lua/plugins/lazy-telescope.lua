@@ -18,7 +18,6 @@ return {
         end,
         desc = "Find Plugin File",
       },
-      { "<leader>fg", "<cmd>Telescope git_files<cr>", desc = "Find Files (git-files)" },
       {
         "<leader>fs",
         function()

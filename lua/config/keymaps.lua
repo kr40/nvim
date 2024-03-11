@@ -48,3 +48,6 @@ k.nmap({ "<leader>zd", [["_d]], opts({ desc = "Delete Into The Void Register" })
 
 -- Correct the last typo in insert mode
 k.imap({ "<C-l>", "<c-g>u<Esc>[s1z=`]a<c-g>u", opts({ desc = "Correct Last Typo" }) })
+
+-- Close quickfix list
+k.nmap({ "<leader>xc", "<cmd>cclose<cr>", opts({ desc = "Close Quickfix List" }) })
