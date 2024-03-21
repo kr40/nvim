@@ -27,6 +27,26 @@ return {
           k = ai.gen_spec.treesitter({ a = "@assignment.inner", i = "@assignment.lhs" }, {}),
           v = ai.gen_spec.treesitter({ a = "@assignment.outer", i = "@assignment.rhs" }, {}),
           t = { "<([%p%w]-)%f[^<%w][^<>]->.-</%1>", "^<.->().*()</[^/]->$" },
+          d = { "%f[%d]%d+" },
+          e = {
+            {
+              "%u[%l%d]+%f[^%l%d]",
+              "%f[%S][%l%d]+%f[^%l%d]",
+              "%f[%P][%l%d]+%f[^%l%d]",
+              "^[%l%d]+%f[^%l%d]",
+            },
+            "^().*()$",
+          },
+          g = function()
+            local from = { line = 1, col = 1 }
+            local to = {
+              line = vim.fn.line("$"),
+              col = math.max(vim.fn.getline("$"):len(), 1),
+            }
+            return { from = from, to = to }
+          end,
+          u = ai.gen_spec.function_call(), -- u for "Usage"
+          U = ai.gen_spec.function_call({ name_pattern = "[%w_]" }), -- without dot in function name
         },
       }
     end,
@@ -53,11 +73,16 @@ return {
           a = "Argument",
           b = "Balanced ), ], }",
           c = "Class",
-          i = "Object",
+          d = "Digit(s)",
+          e = "Word in CamelCase & snake_case",
           f = "Function",
+          g = "Entire file",
+          i = "Object",
           o = "Block, conditional, loop",
           q = "Quote `, \", '",
           t = "Tag",
+          u = "Use/call function & method",
+          U = "Use/call without dot in name",
           N = "Number",
           R = "Return",
           P = "Parameter",

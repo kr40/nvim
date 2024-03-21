@@ -37,6 +37,8 @@ return {
         "iP",
         "aP",
         "n",
+        "ag",
+        "ig",
       },
       lookForwardSmall = 500,
       lookForwardBig = 500,
