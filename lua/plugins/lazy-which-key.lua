@@ -1,5 +1,5 @@
 return {
-  -- Added "a" for harpoon, Added "z" for user, Added "y" for yank, Added "n" for neorg, Added "p" for project, Added "m" for macro
+  -- Added "a" for harpoon, Added "z" for user, Added "y" for yank, Added "p" for project, Added "m" for macro
   {
     "folke/which-key.nvim",
     event = "VeryLazy",
@@ -25,7 +25,6 @@ return {
         ["<leader>x"] = { name = "+diagnostics/quickfix" },
         ["<leader>z"] = { name = "+user" },
         ["<leader>y"] = { name = "+yank" },
-        ["<leader>n"] = { name = "+neorg" },
         ["<leader>p"] = { name = "+project" },
         ["<leader>m"] = { name = "+macro" },
       },

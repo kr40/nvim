@@ -45,7 +45,7 @@ return {
           { action = "New",                                        desc = " New file",        icon = " ", key = "n" },
           { action = "Telescope oldfiles",                                       desc = " Recent files",    icon = " ", key = "r" },
           { action = "CdProject",                                                desc = " Open Projects",   icon = " ", key = "p" },
-          { action = "Neorg workspace notes",                                    desc = " Open Notes",      icon = " ", key = "o" },
+          -- { action = "Neorg workspace notes",                                    desc = " Open Notes",      icon = " ", key = "o" },
           { action = "Telescope live_grep",                                      desc = " Find text",       icon = " ", key = "g" },
           { action = [[lua require("lazyvim.util").telescope.config_files()()]], desc = " Config",          icon = " ", key = "c" },
           { action = 'lua require("persistence").load()',                        desc = " Restore Session", icon = " ", key = "s" },
